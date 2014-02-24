@@ -13,35 +13,34 @@
 </head>
 
 <body>
+<center>
+<h1 class="ftitle">Welcome to the panel.</h1>
+</center>
+
+
   <div class="container">
 
-<h1 class="ftitle">Welcome to the panel.</h1>
+    <div class="greenboard">
 
-<div class="greenboard">
-
-    <div class="form">
-    
-      <p class="title">Login</p>
-    
-        <form id="form-mail" action="#" method="post" name="form-greenboard">
+        <div class="boardform">
         
-             <div class="nickname">
-               <p class="data">Username</p>
-                 <p><input type="text" name="nickname" id="username" /></p>
-             </div>
-             
-             <div class="password">
-                 <p class="data">Password</p>
-                 <p><input type="password" name="email" id="password" /></p>
-             </div>
-            
-            <div class="submit"></div>
-        
-        </form>
-    
-    </div>
+          <center>
+          <p class="title">Login</p>
+          </center>
 
-</div> <!-- end greenboard -->
+            <form id="form-mail" action="#" method="post" name="form-greenboard">
+            <center>
+              <p class="data">Username</p>
+              <input type="text" name="nickname" id="username" />
+              <p class="data data2">Password</p>
+              <input type="password" name="email" id="password" />
+              <div class="submit"></div>
+            </center>            
+            </form>
+        
+        </div>
+
+    </div> <!-- end greenboard -->
 
 </div> <!-- end container -->
 
@@ -51,16 +50,16 @@
 
     <p class="title">Input the user's user and password</p>
     
-        <form id="form-mail" action="#" method="post" name="form-greenboard">
+        <form id="form-mail">
         
              <div class="Username">
                <p class="data">Username</p>
-                 <p><input type="text" name="nickname" id="Username" /></p>
+                 <input type="text" id="Username" />
              </div>
              
              <div class="Password">
                  <p class="data">Password</p>
-                 <p><input type="password" name="email" id="Password" /></p>
+                 <input type="password" id="Password" />
              </div>
             
             <button id="UserSignInSubmit">submit</button>
