@@ -65,7 +65,7 @@ top: 20px;
 	padding: 10px 10px 10px;
 }
 
-.greenboard {
+.greenboard, .controlPanel {
 
 width: 600px;
 height: 338px;
@@ -84,23 +84,13 @@ margin-right: auto ;
 	background-repeat: repeat-y;
 	z-index: 1;
 }
-.controlPanel{
-	width: 800px;
-	height: 600px;
-	background: url("../images/greenboard.png");
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 230px;
-	left: 32%;
-	z-index: 1;	
-}
 
 
 
 /*Form elements */
 
 
-.boardform {
+.boardform, .UserSignUpForm {
 	
 	position: relative;
 	width: 500px;
@@ -129,7 +119,7 @@ margin-right: auto ;
 
 
 
-#username:hover, #password:hover{
+#username:hover, #Username:hover, #password:hover, #Password:hover{
 
 	border: 2px rgba(255,255,255,0.8) solid; 
 
@@ -141,7 +131,7 @@ box-shadow:         0px 0px 10px rgba(120, 126, 156, 0.72);
 
 
 
-#username{
+#username, #Username{
 	
 	top: -30px;
 	position:relative;
@@ -159,7 +149,7 @@ box-shadow:         0px 0px 10px rgba(120, 126, 156, 0.72);
 }
 
 
-#password{
+#password, #Password{
 	top: -80px;
 	position:relative;
 	padding: 0 10px;
@@ -178,7 +168,7 @@ box-shadow:         0px 0px 10px rgba(120, 126, 156, 0.72);
 }
 
 
- .submit{
+ .submit, #UserSignInSubmit {
 	background: url("../images/arrow.png");
 	background-repeat: no-repeat;
 	background-position: 17px 16px;
@@ -199,7 +189,7 @@ box-shadow:         0px 0px 10px rgba(120, 126, 156, 0.72);
 
 
 
-.submit:hover{
+.submit:hover, #UserSignInSubmit:hover{
 	
 	border: 2px rgba(255,255,255,0.8) solid;
 	background: url("../images/arrow-hover.png");
@@ -208,7 +198,7 @@ box-shadow:         0px 0px 10px rgba(120, 126, 156, 0.72);
 	
 }
 
-.submit:active{
+.submit:active, #UserSignInSubmit:active{
 	
 	border: 2px rgba(255,255,255,1) solid;
 
