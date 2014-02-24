@@ -1,0 +1,84 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>tapp</title>
+  <meta name="description" content="My Parse App">
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.16.min.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/fontface.css" />
+</head>
+
+<body>
+  <div class="container">
+
+<h1 class="ftitle">Welcome to the panel.</h1>
+
+<div class="greenboard">
+
+    <div class="form">
+    
+      <p class="title">Login</p>
+    
+        <form id="form-mail" action="#" method="post" name="form-greenboard">
+        
+             <div class="nickname">
+               <p class="data">Username</p>
+                 <p><input type="text" name="nickname" id="username" /></p>
+             </div>
+             
+             <div class="password">
+                 <p class="data">Password</p>
+                 <p><input type="password" name="email" id="password" /></p>
+             </div>
+            
+            <div class="submit"></div>
+        
+        </form>
+    
+    </div>
+
+</div> <!-- end greenboard -->
+
+</div> <!-- end container -->
+
+<div class="controlPanel">
+
+  <div class="UserSignUpForm">
+
+    <p class="title">Input the user's user and password</p>
+    
+        <form id="form-mail" action="#" method="post" name="form-greenboard">
+        
+             <div class="Username">
+               <p class="data">Username</p>
+                 <p><input type="text" name="nickname" id="Username" /></p>
+             </div>
+             
+             <div class="Password">
+                 <p class="data">Password</p>
+                 <p><input type="password" name="email" id="Password" /></p>
+             </div>
+            
+            <button id="UserSignInSubmit">submit</button>
+        
+        </form>
+
+  </div>
+
+</div> <!-- control panel -->
+
+<div class="menu">
+
+<h1 class="userType">Admin</h1>
+<button id="newUser">New User</button>
+<button>New Teacher</button>
+<button>Send Push</button>
+</div><!-- menu panel-->
+
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+
+
+@charset "utf-8";
+/* CSS Document */
+
+body {
+
+font: 100% Arial, Helvetica, sans-serif;
+background: url("../images/background.png");	
+	
+}
+
+.container{
+
+position: relative;
+top: 200px;
+left: 32%;	
+width: 1000px;
+height: 100%;
+	
+}
+
+.ftitle {
+
+position: relative;
+top: 0;
+left: 180px;	
+color: rgba(000,000,000,1);
+font-size: 2em;	
+	
+}
+
+.title {
+position: relative;
+top: 30px;
+left: 252px;
+	
+}
+
+.data{
+
+position: relative;
+top: -32px;
+left: -140px;
+	
+}
+.menu h1{
+	color: white;
+	position: relative;
+	padding: 10px 10px 10px;
+}
+
+.greenboard {
+
+width: 600px;
+height: 338px;
+background: url("../images/greenboard.png");
+background-repeat: no-repeat;
+	
+}
+.menu{
+	left: 0px;
+	bottom: 0px;
+	height: 100%;
+	background: url("../images/bg1.png");
+	position: fixed;
+	background-repeat: repeat-y;
+	z-index: 1;
+}
+.controlPanel{
+	width: 800px;
+	height: 600px;
+	background: url("../images/greenboard.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 230px;
+	left: 32%;
+	z-index: 1;	
+}
+
+
+
+/*Form elements */
+
+
+.form {
+	
+	position:relative;
+	top: 50px;
+	left: -4%;
+	width: 500px;
+	margin: 20px;	
+}
+
+
+.form .nickname,
+.form .password {
+	
+	position: relative;
+	top: 30px;
+	left: 300px;
+
+	width: 150px;
+	height: 30px; 
+	margin: 0 0 10px 0;
+ 	
+	font-size:1.06667 em;
+
+	border: 2px rgba(255,255,255,0.5) solid;
+
+	     border-radius: 5px;
+    -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+	
+}
+
+
+
+.form input:focus {
+
+	font-style:italic;	
+	
+}
+
+
+
+.form .nickname:hover,
+.form .password:hover {
+
+	border: 2px rgba(255,255,255,0.8) solid; 
+
+-webkit-box-shadow: 0px 0px 10px rgba(120, 126, 156, 0.72);
+-moz-box-shadow:    0px 0px 10px rgba(120, 126, 156, 0.72);
+box-shadow:         0px 0px 10px rgba(120, 126, 156, 0.72);
+	
+}
+
+
+
+.form .nickname input[type=text]{
+	
+	position:relative;
+	top: -110px;
+	padding: 0px 10px;
+	border: 0;
+	background: none;
+	color: rgb(210,212,222);
+	width: 130px; 
+	height: 30px;
+	outline:none;
+
+	     border-radius: 5px;
+    -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+ 
+}
+
+
+.form .password input[type=password]{
+	
+	position:relative;
+	top: -110px;
+	padding: 0 10px;
+	border: 0;
+	background: none;
+	color: rgb(210,212,222);
+	width: 130px; 
+	height: 30px;
+	outline:none;
+
+	     border-radius: 5px;
+    -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+ 
+}
+
+
+
+.form .submit{
+	
+	background: url("../images/arrow.png");
+	background-repeat: no-repeat;
+	background-position: 17px 16px;
+	
+}
+
+.form .submit:hover{
+	
+	background: url("../images/arrow-hover.png");
+	background-repeat: no-repeat;
+	background-position: 17px 16px;
+	
+}
+
+
+
+.form .submit{
+
+	position: relative;
+	top: 35px;
+	left: 470px;
+	
+	height: 45px;
+	width: 45px;
+
+	border: 2px rgba(255,255,255,0.5) solid;
+    cursor: pointer;
+
+		border-radius: 100px;
+	 -o-border-radius: 100px;
+   -moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+
+}
+
+
+
+.form .submit:hover{
+	
+	border: 2px rgba(255,255,255,0.8) solid;
+
+}
+
+
+.form .submit:active{
+	
+	border: 2px rgba(255,255,255,1) solid;
+
+}
+
+

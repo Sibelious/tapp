@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'Jerry_B4s_handwriting';
+    scr: url('../font/Jerry_B4s_handwriting.ttf');
+    src: url('../font/Jerry_B4s_handwriting.ttf?#iefix') format('embedded-truetype'),
+url('../font/Jerry_B4s_handwriting.ttf') format('truetype'),
+url('../font/Jerry_B4s_handwriting.ttf') format('truetype'),
+url('../font/Jerry_B4s_handwriting.ttf#Jerry_B4s_handwriting') format('truetype');
+
+}
+
+p {
+	
+font-family: "Jerry_B4s_handwriting", sans-serif;
+color: rgba(255,255,255,0.8);
+font-size: 2em;
+
+}
