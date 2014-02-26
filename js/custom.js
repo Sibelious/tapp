@@ -55,7 +55,7 @@ $(document).ready(function(){
 
         var name = $('#Username').val();
         var passcode = $('#Password').val();
-        var email =  $('Email').val(); //This is not defined on purpose, may define later
+        var email =  $('Email').val(); //Will not use email auth methods for this app for version 1.
 
         var user = new Parse.User();
 
