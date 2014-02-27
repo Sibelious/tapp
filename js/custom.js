@@ -42,7 +42,7 @@ $(document).ready(function(){
             });
             $('.menu').show();
             $('.menu').stop().animate({
-                'width':'30%'
+                'width':'20%'
               }, 500);
 
           };
