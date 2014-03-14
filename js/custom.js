@@ -1,6 +1,8 @@
 // Initialize
 Parse.initialize("gRgG6rXH59W6J19MrqWtiAWAdEGqjoZjEs0GsH6H", "viwxKM3bX10rDDpGpdc3U0kDCr9eJm4WDhhrlPR3");
 $(document).ready(function(){
+
+
             
   $('.controlPanel').hide();
   $('.menu').hide(); 
@@ -19,10 +21,41 @@ $(document).ready(function(){
               var username = $('#username').val();
               var password = $('#password').val();
 
+              window.Usersname = username;
+
              Parse.User.logIn(username, password, {
             success: function(user) {
-              alert("Welcome " + username);
-              goHome();
+              //Authentication
+              var Auth = Parse.Object.extend("User");
+              var query = new Parse.Query(Auth);
+              query.equalTo("username", Usersname);
+              query.find
+              ({
+                success: function(results)
+                {
+                  for (var i = 0; i < results.length; i++){
+                    var object = results[i];
+                    var auth = object.get('isUsrTeacher')
+                    if (auth) {
+                      $('.userType').text(Usersname);
+                      goHome();
+                    }
+                    else
+                    {
+                      alert("You are not a teacher!");
+                    }
+
+                  }
+                },
+                error: function(error){
+                  alert("Error: " + error.code + " " + error.message);
+                }
+          
+                });
+              //End Authentication
+
+
+              
             },
 
             error: function(user, error) {
