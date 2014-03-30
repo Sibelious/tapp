@@ -10,20 +10,8 @@ background: url("../images/background.png");
 	
 }
 
-<<<<<<< HEAD
 button{
 color: black;
-=======
-#logo{
-	padding: 0px;
-		width: 251px;
-		height: 120px;
-		margin-left: auto;
-		margin-right: auto;
-		background-repeat: no-repeat;
-		background-image: url('../images/databook.png');
-		background-size: contain;
->>>>>>> some updates
 }
 
 .container{
