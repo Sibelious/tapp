@@ -110,12 +110,16 @@ $(document).ready(function(){
               }
             });
     };
-
-  $('#newUser').click(function newusr(){
-    if (IsFloorActive) {
+      function ClearFloor(){
       $('.UserSignUpForm').hide();     
       $('.hlForm').hide();
+      $('#GroupSelect').hide();
+      $('#indivForm').hide();
       IsFloorActive = false;
+      }
+  $('#newUser').click(function newusr(){
+    if (IsFloorActive) {
+      ClearFloor();
       newusr();
     }
     else{
@@ -126,23 +130,30 @@ $(document).ready(function(){
     };
     
   });
+  $('#indivSelect').click(function(){
+    $('#GroupSelect').hide();
+    $('#indivForm').fadeIn( 200 );
+    
+  });
   $('#hltrigger').click(function hltriggr(){
     if (IsFloorActive) {
-      $('.UserSignUpForm').hide();     
-      $('.hlForm').hide();
-      IsFloorActive = false;
+      ClearFloor();
       hltriggr();
     }
     else{
-      $('.hlForm').fadeIn(1000, function(){
-      //done
-    });
+      $('#indivForm').hide();
+      $('.hlForm').fadeIn( 80 );
+      $('#GroupSelect').fadeIn( 80 );
+      
       IsFloorActive = true;
     };
     
   });
 
-
+  //Function to get all users from the server
+  function GetUsers(){
+    var userget = Parse.Object.extend()
+  };
 
   //Function to save a homework object
        

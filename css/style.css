@@ -9,6 +9,18 @@ font: 100% Arial, Helvetica, sans-serif;
 background: url("../images/background.png");	
 	
 }
+.hlForm{
+	width: 80%;
+	height: 100%;
+	position: absolute;
+	right: 0px;
+}
+#GroupSelect, #indivForm{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	right: 0px;
+}
 #logo{
 	padding: 0px;
 		width: 251px;
@@ -21,7 +33,24 @@ background: url("../images/background.png");
 }
 
 button{
-color: black;
+	color: white;
+	background-color: rgba(32, 32, 32, 0.58);
+	border: none;
+	text-indent:0px;
+	display:inline-block;
+	font-family:arial;
+	font-weight:bold;
+	font-style:normal;
+	height:59px;
+	line-height:59px;
+	width:100%;
+	text-decoration:none;
+	text-align:center;
+}button:hover {
+	background-color:rgba(59, 52, 52, 0.58);
+}button:active {
+	position:relative;
+	top:1px;
 }
 
 .container{
