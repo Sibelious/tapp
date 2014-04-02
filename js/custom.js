@@ -9,6 +9,7 @@ $(document).ready(function(){
   $('.UserSignUpForm').hide();     
   $('.hlForm').hide(); 
 
+
   $(".submit").click(function(event){
               event.preventDefault();
               
@@ -20,7 +21,7 @@ $(document).ready(function(){
               
               var username = $('#username').val();
               var password = $('#password').val();
-
+              
               window.Usersname = username;
 
              Parse.User.logIn(username, password, {
@@ -67,6 +68,8 @@ $(document).ready(function(){
 
           function goHome(){
             $('.greenboard').fadeOut( 1000, homeRedir());
+            var isFloorActive = false;
+            window.IsFloorActive = isFloorActive
           };
 
           function homeRedir(){
@@ -108,15 +111,35 @@ $(document).ready(function(){
             });
     };
 
-  $('#newUser').click(function(){
-    $('.UserSignUpForm').fadeIn( 1000, function(){
+  $('#newUser').click(function newusr(){
+    if (IsFloorActive) {
+      $('.UserSignUpForm').hide();     
+      $('.hlForm').hide();
+      IsFloorActive = false;
+      newusr();
+    }
+    else{
+      $('.UserSignUpForm').fadeIn( 1000, function(){
       //done
     });
+      IsFloorActive = true;
+    };
+    
   });
-  $('#hltrigger').click(function(){
-    $('.hlForm').fadeIn(1000, function(){
+  $('#hltrigger').click(function hltriggr(){
+    if (IsFloorActive) {
+      $('.UserSignUpForm').hide();     
+      $('.hlForm').hide();
+      IsFloorActive = false;
+      hltriggr();
+    }
+    else{
+      $('.hlForm').fadeIn(1000, function(){
       //done
     });
+      IsFloorActive = true;
+    };
+    
   });
 
 
