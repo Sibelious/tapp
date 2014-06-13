@@ -7,7 +7,9 @@ $(document).ready(function(){
   $('.controlPanel').hide();
   $('.menu').hide(); 
   $('.UserSignUpForm').hide();     
-  $('.hlForm').hide(); 
+  $('.hlForm').hide();
+  $('.classForm').hide();
+  $('#allClassesBox').hide();
 
 
   $(".submit").click(function(event){
@@ -115,6 +117,8 @@ $(document).ready(function(){
       $('.hlForm').hide();
       $('#GroupSelect').hide();
       $('#indivForm').hide();
+      $('.classForm').hide();
+      $('#allClassesBox').hide();
       IsFloorActive = false;
       }
   $('#newUser').click(function newusr(){
@@ -130,11 +134,58 @@ $(document).ready(function(){
     };
     
   });
+
   $('#indivSelect').click(function(){
     $('#GroupSelect').hide();
     $('#indivForm').fadeIn( 200 );
     
   });
+
+  $('#classSelect').click(function(){
+    $('#GroupSelect').hide();
+    $('.classForm').fadeIn( 200 );
+  });
+
+  function getClasses(){
+    var teacherClassQuery = Parse.Object.extend("User");
+    var query = new Parse.Query(teacherClassQuery);
+    query.equalTo("Username", username);
+    query.find
+    ({
+      success: function(results) 
+            {
+            // Do something with the returned Parse.Object values
+            for (var i = 0; i < results.length; i++) { 
+            var object = results[i];
+            var teacherHasClass = object.get('teacherHasClass');
+            if (teacherHasClass){
+              var teacherClass1 = object.get('Class1')
+              var teacherClass2 = object.get('Class2')
+            }
+            else{
+              noClassesFound();
+            }
+            }
+            },
+            error: function(error) 
+            {
+            alert("Error: " + error.code + " " + error.message);
+            }
+    })
+  };
+
+  $('#classChecker').click(function clsschkr(){
+      if (IsFloorActive) {
+        ClearFloor();
+        clsschkr();
+      }
+      else{
+        $('.tNWBox').text("Here are your classes, " + username);
+        getClasses();
+        $('#allClassesBox').fadeIn( 200 );
+      }
+  });
+
   $('#hltrigger').click(function hltriggr(){
     if (IsFloorActive) {
       ClearFloor();

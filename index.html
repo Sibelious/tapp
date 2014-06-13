@@ -73,7 +73,7 @@
     <div class="hlForm">
     <div id="GroupSelect">
       <h1>Who would you like to set homework to?</h1>
-      <button>One of my classes</button>
+      <button id="classSelect">One of my classes</button>
       <button id="indivSelect">One particular student</button>
     </div>
 
@@ -100,6 +100,25 @@
         </center>
       </form>
       </div>
+      <div class="classForm">
+        <form>
+          <div id="classSelector"></div>
+          <div id="HlContentBox">
+            <textarea></textarea>
+            <div class="classHlSubmit"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="allClassesBox">
+      <div class="teacherNameWelcome">
+        <h1 class="tNWBox"></h1>
+      </div>
+      <div class="mainClassData">
+        <div class="Classes"></div>
+        <div class="Students"></div>
+      </div>
     </div>
 
 
@@ -116,7 +135,7 @@
   
     <p><button id="newUser">New User</button></p>
     <p><button>New Teacher</button></p>
-    <p><button>Send Push</button></p>
+    <p><button id="classChecker">My Classes</button></p>
     <p><button id="hltrigger">Set Home Learning</button></p>
   
 

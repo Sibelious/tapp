@@ -9,6 +9,30 @@ font: 100% Arial, Helvetica, sans-serif;
 background: url("../images/background.png");	
 	
 }
+.classform{
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	right: 0px;
+}
+#classSelector{
+	padding: 0px;
+	height: 60%;
+	width: 100%;
+	border: 10px black dashed;
+	position: absolute;
+	right: 0px;
+}
+#HlContentBox{
+	padding: 0px;
+	height: 40%;
+	width: 100%;
+	border: 10px black dashed;
+	position: absolute;
+	right: 0px;
+}
+
 .hlForm{
 	width: 80%;
 	height: 100%;
@@ -132,7 +156,7 @@ margin-right: auto ;
 	height: 100%;
 	background: url("../images/bg1.png");
 	position: fixed;
-	background-repeat: repeat-y;
+	background-repeat: repeat;
 	z-index: 1;
 }
 
