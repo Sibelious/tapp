@@ -10,6 +10,7 @@ $(document).ready(function(){
   $('.hlForm').hide();
   $('.classForm').hide();
   $('#allClassesBox').hide();
+  $('.classSetup').hide();
 
 
   $(".submit").click(function(event){
@@ -146,6 +147,11 @@ $(document).ready(function(){
     $('.classForm').fadeIn( 200 );
   });
 
+  function noClassesFound(){
+    $('.hasNoClass').fadeIn( 200 );
+
+  };
+
   function getClasses(){
     var teacherClassQuery = Parse.Object.extend("User");
     var query = new Parse.Query(teacherClassQuery);
@@ -171,7 +177,7 @@ $(document).ready(function(){
             {
             alert("Error: " + error.code + " " + error.message);
             }
-    })
+    });
   };
 
   $('#classChecker').click(function clsschkr(){
@@ -180,11 +186,17 @@ $(document).ready(function(){
         clsschkr();
       }
       else{
-        $('.tNWBox').text("Here are your classes, " + username);
+        $('.tNWBox').text("Here are your classes, " + Usersname + ".");
         getClasses();
         $('#allClassesBox').fadeIn( 200 );
       }
   });
+
+  $('.classMakeTrigger').click(
+    $('.mainClassData').fadeOut( 200 );
+    $('.teacherNameWelcome').fadeOut( 200 );
+    $('.classSetup').fadeIn( 200 );
+  );
 
   $('#hltrigger').click(function hltriggr(){
     if (IsFloorActive) {
