@@ -189,14 +189,36 @@ $(document).ready(function(){
         $('.tNWBox').text("Here are your classes, " + Usersname + ".");
         getClasses();
         $('#allClassesBox').fadeIn( 200 );
+        IsFloorActive = true;
       }
   });
 
-  $('.classMakeTrigger').click(
+  $('.classMakeTrigger').click( function(){
     $('.mainClassData').fadeOut( 200 );
     $('.teacherNameWelcome').fadeOut( 200 );
     $('.classSetup').fadeIn( 200 );
-  );
+
+    var studentQuery = Parse.Object.extend("User");
+    var query = new Parse.Query(studentQuery);
+    query.notContainedIn("username",
+                     ["Admin", "ExpandDong", "crawford.j", "Isaacs", "yearwood"])
+    query.find
+    ({
+      success: function(results) 
+            {
+            // Do something with the returned Parse.Object values
+            for (var i = 0; i < results.length; i++) { 
+            var object = results[i];
+            $('.studentPicker').append( '<div class="stuPickerContent">' + object.get('username') + '</div>' )
+            alert( object.get('username'))
+            }
+            },
+            error: function(error) 
+            {
+            alert("Error: " + error.code + " " + error.message);
+            }
+    })
+  });
 
   $('#hltrigger').click(function hltriggr(){
     if (IsFloorActive) {
