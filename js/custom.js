@@ -210,7 +210,7 @@ $(document).ready(function(){
             for (var i = 0; i < results.length; i++) { 
             var object = results[i];
             $('.studentPicker').append( '<div class="stuPickerContent">' + object.get('username') + '</div>' )
-            alert( object.get('username'))
+            
             }
             },
             error: function(error) 
