@@ -155,7 +155,7 @@ $(document).ready(function(){
   function getClasses(){
     var teacherClassQuery = Parse.Object.extend("User");
     var query = new Parse.Query(teacherClassQuery);
-    query.equalTo("Username", username);
+    query.equalTo("Username", Usersname);
     query.find
     ({
       success: function(results) 
@@ -197,7 +197,27 @@ $(document).ready(function(){
     $('.mainClassData').fadeOut( 200 );
     $('.teacherNameWelcome').fadeOut( 200 );
     $('.classSetup').fadeIn( 200 );
+    GetUsers();
+    
+  });
 
+  $('#hltrigger').click(function hltriggr(){
+    if (IsFloorActive) {
+      ClearFloor();
+      hltriggr();
+    }
+    else{
+      $('#indivForm').hide();
+      $('.hlForm').fadeIn( 80 );
+      $('#GroupSelect').fadeIn( 80 );
+      
+      IsFloorActive = true;
+    };
+    
+  });
+
+  //Function to get all users from the server
+  function GetUsers(){
     var studentQuery = Parse.Object.extend("User");
     var query = new Parse.Query(studentQuery);
     query.notContainedIn("username",
@@ -218,32 +238,12 @@ $(document).ready(function(){
             alert("Error: " + error.code + " " + error.message);
             }
     })
-  });
-
-  $('#hltrigger').click(function hltriggr(){
-    if (IsFloorActive) {
-      ClearFloor();
-      hltriggr();
-    }
-    else{
-      $('#indivForm').hide();
-      $('.hlForm').fadeIn( 80 );
-      $('#GroupSelect').fadeIn( 80 );
-      
-      IsFloorActive = true;
-    };
-    
-  });
-
-  //Function to get all users from the server
-  function GetUsers(){
-    var userget = Parse.Object.extend()
   };
 
   //Function to save a homework object
        
        $('#hlSubmit').click(
-        function saveit (){
+        function (){
        var Homework = Parse.Object.extend("Homework");
        var homework = new Homework();
 
