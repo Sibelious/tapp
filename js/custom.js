@@ -154,34 +154,39 @@ $(document).ready(function(){
     $('.classForm').fadeIn( 200 );
   });
 
+  function finishedClassCreation(){
+    $('.classSetup').fadeOut( 200 );
+    $('#allClassesBox').fadeIn( 200 );
+
+  }
+
   $('.newClassSubmit').click(function(){
 
     $('.student').each(function(){
         if($(this).is(':checked')){
 
-       function doeet(){
-
-       var PutClass = Parse.Object.extend("Homework");
+        var PutClass = Parse.Object.extend("Class");
         var query = new Parse.Query(PutClass);
-        var classToUser = $(this).prev().html();
-        
-        query.equalTo("UserName", "Honey");
+        var classToUser = $(this).prev();
+        alert( classToUser.html() );
+        query.equalTo("usersname", classToUser.html());
         query.first({
           success: function(object) {
 
-            object.set("class1", $('.className').val() );
+            object.set("clsNme", $('.className').val() );
+            object.set("setByTeacher", Usersname);
             object.save();
+
 
           },
           error: function(error) {
             alert("Error: " + error.code + " " + error.message);
           }
         });
-    }
 
+        finishedClassCreation();
+    
 
-          doeet();
-                      
 
         }
         else{
@@ -197,7 +202,7 @@ $(document).ready(function(){
   };
 
   function getClasses(){
-    var teacherClassQuery = Parse.Object.extend("User");
+    var teacherClassQuery = Parse.Object.extend("Class");
     var query = new Parse.Query(teacherClassQuery);
     query.equalTo("Username", Usersname);
     query.find
