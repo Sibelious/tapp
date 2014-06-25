@@ -3,7 +3,6 @@ Parse.initialize("gRgG6rXH59W6J19MrqWtiAWAdEGqjoZjEs0GsH6H", "viwxKM3bX10rDDpGpd
 $(document).ready(function(){
 
 
-            
   $('.controlPanel').hide();
   $('.menu').hide(); 
   $('.UserSignUpForm').hide();     
@@ -15,17 +14,21 @@ $(document).ready(function(){
 
   $(".submit").click(function(event){
               event.preventDefault();
-              
               signIn();
             });
-     
-          
+
           function signIn(){
-              
+            
+               
+
               var username = $('#username').val();
               var password = $('#password').val();
               
               window.Usersname = username;
+
+              $.cookie("cookie_Username", username);
+              $.cookie("cookie_Psw", password);
+              $.cookie("isCached", true);
 
              Parse.User.logIn(username, password, {
             success: function(user) {
@@ -66,7 +69,11 @@ $(document).ready(function(){
                   
                   alert("Error: " + error.code + " " + error.message);
                 }
-            });   
+            });
+                  
+              
+              
+                 
           };
 
           function goHome(){
@@ -145,6 +152,43 @@ $(document).ready(function(){
   $('#classSelect').click(function(){
     $('#GroupSelect').hide();
     $('.classForm').fadeIn( 200 );
+  });
+
+  $('.newClassSubmit').click(function(){
+
+    $('.student').each(function(){
+        if($(this).is(':checked')){
+
+       function doeet(){
+
+       var PutClass = Parse.Object.extend("Homework");
+        var query = new Parse.Query(PutClass);
+        var classToUser = $(this).prev().html();
+        
+        query.equalTo("UserName", "Honey");
+        query.first({
+          success: function(object) {
+
+            object.set("class1", $('.className').val() );
+            object.save();
+
+          },
+          error: function(error) {
+            alert("Error: " + error.code + " " + error.message);
+          }
+        });
+    }
+
+
+          doeet();
+                      
+
+        }
+        else{
+        //Do nothing
+        }
+    });
+          
   });
 
   function noClassesFound(){
@@ -229,7 +273,7 @@ $(document).ready(function(){
             // Do something with the returned Parse.Object values
             for (var i = 0; i < results.length; i++) { 
             var object = results[i];
-            $('.studentPicker').append( '<div class="stuPickerContent">' + object.get('username') + '</div>' )
+            $('.studentPicker').append( '<div>' + '<div class="stuPickerContent">' + object.get('username') + '</div>' + '<input type="checkbox" class="student" name="studentsName" value="StudentsUser">' + '</div>')
             
             }
             },
@@ -270,7 +314,9 @@ $(document).ready(function(){
     });
 
        
-    
+    $('#logout').click(function(){
+      $.cookie("isCached", false);
+    });
 
 
 

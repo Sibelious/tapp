@@ -14,8 +14,11 @@ background: url("../images/background.png");
 	height: 100%;
 	position: absolute;
 	right: 0px;
+}
+.stuPickerChk{
 
 }
+
 .className{
 
 	color: #FFF;
