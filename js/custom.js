@@ -61,8 +61,6 @@ $(document).ready(function(){
                 });
               //End Authentication
 
-
-              
             },
 
             error: function(user, error) {
@@ -156,7 +154,8 @@ $(document).ready(function(){
 
   function finishedClassCreation(){
     $('.classSetup').fadeOut( 200 );
-    $('#allClassesBox').fadeIn( 200 );
+    $('.mainClassData').fadeIn( 200 );
+    $('.teacherNameWelcome').fadeIn( 200 );
 
   }
 
@@ -186,8 +185,6 @@ $(document).ready(function(){
 
         finishedClassCreation();
     
-
-
         }
         else{
         //Do nothing
@@ -196,38 +193,8 @@ $(document).ready(function(){
           
   });
 
-  function noClassesFound(){
-    $('.hasNoClass').fadeIn( 200 );
 
-  };
-
-  function getClasses(){
-    var teacherClassQuery = Parse.Object.extend("Class");
-    var query = new Parse.Query(teacherClassQuery);
-    query.equalTo("Username", Usersname);
-    query.find
-    ({
-      success: function(results) 
-            {
-            // Do something with the returned Parse.Object values
-            for (var i = 0; i < results.length; i++) { 
-            var object = results[i];
-            var teacherHasClass = object.get('teacherHasClass');
-            if (teacherHasClass){
-              var teacherClass1 = object.get('Class1')
-              var teacherClass2 = object.get('Class2')
-            }
-            else{
-              noClassesFound();
-            }
-            }
-            },
-            error: function(error) 
-            {
-            alert("Error: " + error.code + " " + error.message);
-            }
-    });
-  };
+  
 
   $('#classChecker').click(function clsschkr(){
       if (IsFloorActive) {
@@ -236,8 +203,8 @@ $(document).ready(function(){
       }
       else{
         $('.tNWBox').text("Here are your classes, " + Usersname + ".");
-        getClasses();
         $('#allClassesBox').fadeIn( 200 );
+        $('.hasNoClass').hide();
         IsFloorActive = true;
       }
   });
