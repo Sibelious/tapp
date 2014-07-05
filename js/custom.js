@@ -10,6 +10,7 @@ $(document).ready(function(){
   $('.classForm').hide();
   $('#allClassesBox').hide();
   $('.classSetup').hide();
+  $('.hasNoClass').hide();
 
 
   $(".submit").click(function(event){
@@ -90,6 +91,7 @@ $(document).ready(function(){
               }, 500);
 
           };
+
   $("#UserSignInSubmit").click(function(event){
     event.preventDefault();
     signUp();
@@ -127,6 +129,7 @@ $(document).ready(function(){
       $('#allClassesBox').hide();
       IsFloorActive = false;
       }
+
   $('#newUser').click(function newusr(){
     if (IsFloorActive) {
       ClearFloor();
@@ -155,7 +158,11 @@ $(document).ready(function(){
   function finishedClassCreation(){
     $('.classSetup').fadeOut( 200 );
     $('.mainClassData').fadeIn( 200 );
+<<<<<<< HEAD
     $('.teacherNameWelcome').fadeIn( 200 );
+=======
+    $('.teacherNameWelcome').fadeIn(200);
+>>>>>>> origin/gh-pages
 
   }
 
@@ -193,8 +200,60 @@ $(document).ready(function(){
           
   });
 
+<<<<<<< HEAD
 
   
+=======
+  function noClassesFound(){
+    $('.hasNoClass').fadeIn( 200 );
+  };
+
+  function classesFound(){
+    var classPut = Parse.Object.extend("Class");
+    var query = new Parse.Query(classPut);
+    query.equalTo("setByTeacher", Usersname);
+    query.find
+    ({
+      success: function(results){
+        for (var i = 0; i < results.length; i++) {
+          var object = results[i];
+          var teacherClass1 = object.get('clsNme');
+          $('.Classes').append( '<button>' + teacherClass1 + '</button>');
+        }
+      },
+      error: function(error){
+        alert("Error: " + error.code + " " + error.message);
+      }
+    });
+  };
+  function getClasses(){
+    var teacherClassQuery = Parse.Object.extend("User");
+    var query = new Parse.Query(teacherClassQuery);
+    query.equalTo("username", Usersname);
+    query.find
+    ({
+      success: function(results) 
+            {
+            // Do something with the returned Parse.Object values
+            for (var i = 0; i < results.length; i++) { 
+            var object = results[i];
+            var teacherHasClass = object.get('teacherHasClass');
+            if (teacherHasClass){
+              classesFound();
+              
+            }
+            else{
+              noClassesFound();
+            }
+            }
+            },
+            error: function(error) 
+            {
+            alert("Error: " + error.code + " " + error.message);
+            }
+    });
+  };
+>>>>>>> origin/gh-pages
 
   $('#classChecker').click(function clsschkr(){
       if (IsFloorActive) {
@@ -230,6 +289,25 @@ $(document).ready(function(){
       IsFloorActive = true;
     };
     
+  });
+
+  function putStudents(){
+    var getStudents = Parse.Object.extend("User");
+    var query = new Parse.Query(getStudents);
+    query.equalTo("clsNme", $('.Classes.button').html() );
+    query.find
+    ({
+      success: function(results){
+        for (var i = 0; i < results.length; i++){
+          var object = results[i];
+          
+        }
+      }, error: function(){}
+    });
+  };
+
+  $('.Classes.button').click(function(){
+    putStudents();
   });
 
   //Function to get all users from the server
