@@ -158,11 +158,8 @@ $(document).ready(function(){
   function finishedClassCreation(){
     $('.classSetup').fadeOut( 200 );
     $('.mainClassData').fadeIn( 200 );
-<<<<<<< HEAD
+
     $('.teacherNameWelcome').fadeIn( 200 );
-=======
-    $('.teacherNameWelcome').fadeIn(200);
->>>>>>> origin/gh-pages
 
   }
 
@@ -200,10 +197,7 @@ $(document).ready(function(){
           
   });
 
-<<<<<<< HEAD
 
-  
-=======
   function noClassesFound(){
     $('.hasNoClass').fadeIn( 200 );
   };
@@ -253,7 +247,6 @@ $(document).ready(function(){
             }
     });
   };
->>>>>>> origin/gh-pages
 
   $('#classChecker').click(function clsschkr(){
       if (IsFloorActive) {
@@ -264,6 +257,7 @@ $(document).ready(function(){
         $('.tNWBox').text("Here are your classes, " + Usersname + ".");
         $('#allClassesBox').fadeIn( 200 );
         $('.hasNoClass').hide();
+        getClasses();
         IsFloorActive = true;
       }
   });
