@@ -57,10 +57,22 @@ $(document).ready(function(){
                   error: function(error){
                     alert("Error: " + error.code + " " + error.message);
                   }
+<<<<<<< HEAD
             
                   });
                 //End Authentication
               },
+=======
+                },
+                error: function(error){
+                  alert("Error: " + error.code + " " + error.message);
+                }
+          
+                });
+              //End Authentication
+
+            },
+>>>>>>> origin/gh-pages
 
       error: function(user, error) {
                     
@@ -112,6 +124,7 @@ $(document).ready(function(){
 
   //Crucial Function to  clear a screen so another screen can be shown
       function ClearFloor(){
+<<<<<<< HEAD
         $('.UserSignUpForm').hide();     
         $('.hlForm').hide();
         $('#GroupSelect').hide();
@@ -120,6 +133,62 @@ $(document).ready(function(){
         $('#allClassesBox').hide();
         IsFloorActive = false;
   };
+=======
+      $('.UserSignUpForm').hide();     
+      $('.hlForm').hide();
+      $('#GroupSelect').hide();
+      $('#indivForm').hide();
+      $('.classForm').hide();
+      $('#allClassesBox').hide();
+      IsFloorActive = false;
+      }
+
+  $('#newUser').click(function newusr(){
+    if (IsFloorActive) {
+      ClearFloor();
+      newusr();
+    }
+    else{
+      $('.UserSignUpForm').fadeIn( 1000, function(){
+      //done
+    });
+      IsFloorActive = true;
+    };
+    
+  });
+
+  $('#indivSelect').click(function(){
+    $('#GroupSelect').hide();
+    $('#indivForm').fadeIn( 200 );
+    
+  });
+
+  $('#classSelect').click(function(){
+    $('#GroupSelect').hide();
+    $('.classForm').fadeIn( 200 );
+  });
+
+  function finishedClassCreation(){
+    $('.classSetup').fadeOut( 200 );
+    $('.mainClassData').fadeIn( 200 );
+
+    $('.teacherNameWelcome').fadeIn( 200 );
+
+  }
+
+  $('.newClassSubmit').click(function(){
+
+    $('.student').each(function(){
+        if($(this).is(':checked')){
+
+        var PutClass = Parse.Object.extend("Class");
+        var query = new Parse.Query(PutClass);
+        var classToUser = $(this).prev();
+        alert( classToUser.html() );
+        query.equalTo("usersname", classToUser.html());
+        query.first({
+          success: function(object) {
+>>>>>>> origin/gh-pages
 
   //Function to take you back to the manage classes screen
     function finishedClassCreation(){
@@ -146,11 +215,29 @@ $(document).ready(function(){
             var teacherClass1 = object.get('clsNme');
             $('.Classes').append( '<button>' + teacherClass1 + '</button>');
           }
+<<<<<<< HEAD
         },
         error: function(error){
           alert("Error: " + error.code + " " + error.message);
         }
       });
+=======
+        });
+
+        finishedClassCreation();
+    
+        }
+        else{
+        //Do nothing
+        }
+    });
+          
+  });
+
+
+  function noClassesFound(){
+    $('.hasNoClass').fadeIn( 200 );
+>>>>>>> origin/gh-pages
   };
 
   //Function to check if teacherHasClass and decide if classesFound or noClassesFound screens should be shown
@@ -182,6 +269,7 @@ $(document).ready(function(){
       });
   };
 
+<<<<<<< HEAD
   //Function to create a new class
     function putStudents(){
       var getStudents = Parse.Object.extend("User");
@@ -196,6 +284,58 @@ $(document).ready(function(){
           }
         }, error: function(){}
       });
+=======
+  $('#classChecker').click(function clsschkr(){
+      if (IsFloorActive) {
+        ClearFloor();
+        clsschkr();
+      }
+      else{
+        $('.tNWBox').text("Here are your classes, " + Usersname + ".");
+        $('#allClassesBox').fadeIn( 200 );
+        $('.hasNoClass').hide();
+        getClasses();
+        IsFloorActive = true;
+      }
+  });
+
+  $('.classMakeTrigger').click( function(){
+    $('.mainClassData').fadeOut( 200 );
+    $('.teacherNameWelcome').fadeOut( 200 );
+    $('.classSetup').fadeIn( 200 );
+    GetUsers();
+    
+  });
+
+  $('#hltrigger').click(function hltriggr(){
+    if (IsFloorActive) {
+      ClearFloor();
+      hltriggr();
+    }
+    else{
+      $('#indivForm').hide();
+      $('.hlForm').fadeIn( 80 );
+      $('#GroupSelect').fadeIn( 80 );
+      
+      IsFloorActive = true;
+    };
+    
+  });
+
+  function putStudents(){
+    var getStudents = Parse.Object.extend("User");
+    var query = new Parse.Query(getStudents);
+    query.equalTo("clsNme", $('.Classes.button').html() );
+    query.find
+    ({
+      success: function(results){
+        for (var i = 0; i < results.length; i++){
+          var object = results[i];
+          
+        }
+      }, error: function(){}
+    });
+>>>>>>> origin/gh-pages
   };
 
   //Function to get all users from the server
