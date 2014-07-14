@@ -163,6 +163,8 @@ $(document).ready(function(){
     
   });
 
+  /*======================================================================== CLASSES MODULE ========================================================================== */
+
   $('#classSelect').click(function(){
     $('#GroupSelect').hide();
     $('.classForm').fadeIn( 200 );
@@ -306,6 +308,10 @@ $(document).ready(function(){
     GetUsers();
     
   });
+
+
+  /*======================================================================== END CLASSES MODULE ========================================================================== */
+
 
   $('#hltrigger').click(function hltriggr(){
     if (IsFloorActive) {
