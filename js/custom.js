@@ -57,12 +57,12 @@ $(document).ready(function(){
                   error: function(error){
                     alert("Error: " + error.code + " " + error.message);
                   }
-<<<<<<< HEAD
+
             
                   });
                 //End Authentication
               },
-=======
+
                 },
                 error: function(error){
                   alert("Error: " + error.code + " " + error.message);
@@ -72,7 +72,7 @@ $(document).ready(function(){
               //End Authentication
 
             },
->>>>>>> origin/gh-pages
+
 
       error: function(user, error) {
                     
@@ -124,7 +124,7 @@ $(document).ready(function(){
 
   //Crucial Function to  clear a screen so another screen can be shown
       function ClearFloor(){
-<<<<<<< HEAD
+
         $('.UserSignUpForm').hide();     
         $('.hlForm').hide();
         $('#GroupSelect').hide();
@@ -133,7 +133,7 @@ $(document).ready(function(){
         $('#allClassesBox').hide();
         IsFloorActive = false;
   };
-=======
+
       $('.UserSignUpForm').hide();     
       $('.hlForm').hide();
       $('#GroupSelect').hide();
@@ -190,7 +190,7 @@ $(document).ready(function(){
         query.equalTo("usersname", classToUser.html());
         query.first({
           success: function(object) {
->>>>>>> origin/gh-pages
+
 
   //Function to take you back to the manage classes screen
     function finishedClassCreation(){
@@ -217,13 +217,13 @@ $(document).ready(function(){
             var teacherClass1 = object.get('clsNme');
             $('.Classes').append( '<button>' + teacherClass1 + '</button>');
           }
-<<<<<<< HEAD
+
         },
         error: function(error){
           alert("Error: " + error.code + " " + error.message);
         }
       });
-=======
+
         });
 
         finishedClassCreation();
@@ -239,7 +239,7 @@ $(document).ready(function(){
 
   function noClassesFound(){
     $('.hasNoClass').fadeIn( 200 );
->>>>>>> origin/gh-pages
+
   };
 
   //Function to check if teacherHasClass and decide if classesFound or noClassesFound screens should be shown
@@ -271,7 +271,7 @@ $(document).ready(function(){
       });
   };
 
-<<<<<<< HEAD
+
   //Function to create a new class
     function putStudents(){
       var getStudents = Parse.Object.extend("User");
@@ -286,7 +286,7 @@ $(document).ready(function(){
           }
         }, error: function(){}
       });
-=======
+
   $('#classChecker').click(function clsschkr(){
       if (IsFloorActive) {
         ClearFloor();
@@ -341,7 +341,7 @@ $(document).ready(function(){
         }
       }, error: function(){}
     });
->>>>>>> origin/gh-pages
+
   };
 
   //Function to get all users from the server
