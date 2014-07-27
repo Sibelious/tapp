@@ -18,20 +18,14 @@ $(document).ready(function(){
 
   //Function to send and query parse for the login details (signing in)
     function signIn(){
-              
-                 
-
-                var username = $('#username').val();
-                var password = $('#password').val();
-                
-                window.Usersname = username;
-
-                $.cookie("cookie_Username", username);
-                $.cookie("cookie_Psw", password);
-                $.cookie("isCached", true);
-
-               Parse.User.logIn(username, password, {
-      success: function(user) {
+          var username = $('#username').val();
+          var password = $('#password').val();
+          window.Usersname = username;
+          $.cookie("cookie_Username", username);
+          $.cookie("cookie_Psw", password);
+          $.cookie("isCached", true);
+          Parse.User.logIn(username, password, {
+                success: function(user) {
                 //Authentication
                 var Auth = Parse.Object.extend("User");
                 var query = new Parse.Query(Auth);
@@ -61,15 +55,14 @@ $(document).ready(function(){
                   });
                 //End Authentication
               },
-
-      error: function(user, error) {
+              error: function(user, error) {
                     
                     alert("Error: " + error.code + " " + error.message);
                   }
-      });
+              });
   };
 
-  //Function that is part of the clearflor function to clear the screens when switching between screens
+  //Function that is part of the clearfloor function to clear the screens when switching between screens
     function goHome(){
             $('.greenboard').fadeOut( 1000, homeRedir());
             var isFloorActive = false;
@@ -222,9 +215,18 @@ $(document).ready(function(){
       })
   };
 
-  //Function to save a homework object
-       
-       $('#hlSubmit').click(
+  
+
+ /*
+ ===============END OF FUNCTIONS====================                                                                                                                                  
+ */
+
+ /*
+ ===============BUTTON EVENTS=======================                                                                                                                                          
+ */
+
+  //Button Event to save a homework object
+    $('#hlSubmit').click(
         function (){
        var Homework = Parse.Object.extend("Homework");
        var homework = new Homework();
@@ -250,14 +252,6 @@ $(document).ready(function(){
           }
         });
   });
-
- /*
- ===============END OF FUNCTIONS====================                                                                                                                                  
- */
-
- /*
- ===============BUTTON EVENTS=======================                                                                                                                                          
- */
 
   //Button event to trigger the sign in function
     $(".submit").click(function(event){
