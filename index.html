@@ -18,8 +18,9 @@
 </head>
 
 <body>
+
 <center>
-<div id="logo"></div>
+	<div id="logo"></div>
 </center>
 
 
@@ -44,95 +45,91 @@
             </form>
         
         </div>
+	</div> <!-- end greenboard -->
 
-    </div> <!-- end greenboard -->
+	<div class="controlPanel"><!-- the control panel-->
 
-  <div class="controlPanel"><!-- the control panel-->
+	    <div class="UserSignUpForm">
 
-    <div class="UserSignUpForm">
+	      <center>
+	      <p class="title">Input the new username and password</p>
+	      </center>
 
-      <center>
-      <p class="title">Input the new username and password</p>
-      </center>
+	      <form id="form-mail">
+	                  
+	          <p class="data">Username</p>
+	          <center>
+	          <input type="text" id="Username" />
+	          </center>
+	          <p class="data data2">Password</p>
+	          <center>
+	          <input type="password" id="Password" />
+	          </center>
+	          <div id="UserSignInSubmit"></div>
+	        
+	      </form>
+		</div>
 
-      <form id="form-mail">
-                  
-          <p class="data">Username</p>
-          <center>
-          <input type="text" id="Username" />
-          </center>
-          <p class="data data2">Password</p>
-          <center>
-          <input type="password" id="Password" />
-          </center>
-          <div id="UserSignInSubmit"></div>
-        
-      </form>
+	    <div class="hlForm">
+		    <div id="GroupSelect">
+		      <h1>Who would you like to set homework to?</h1>
+		      <button id="classSelect">One of my classes</button>
+		      <button id="indivSelect">One particular student</button>
+		    </div>
 
-    </div>
+		    <div id="indivForm">
+		      <center>
+		        <p class="title">Dish it out.</p>
+		      </center>
 
-    <div class="hlForm">
-    <div id="GroupSelect">
-      <h1>Who would you like to set homework to?</h1>
-      <button id="classSelect">One of my classes</button>
-      <button id="indivSelect">One particular student</button>
-    </div>
+		      <form id="form-mail">
+		        <center>
+		          <p class="data">Student Name</p>
+		          <input type="text" id="StudentName">
+		          <p class="data data2">Subject</p>
+		          <select id="subjectSelector">
+		            <option value="English">English</option>
+		            <option value="Maths">Maths</option>
+		            <option value="Physics">Physics</option>
+		            <option value="Economics">Economics</option>
+		            <option value="Other">Other</option>
+		          </select>
+		          <p class="data">Whats the homework?</p>
+		          <textarea id="hltext">put it here</textarea>
+		          <div id="hlSubmit"></div>
+		        </center>
+		      </form>
+		      </div>
+		      <div class="classForm">
+		        <form>
+		          <div id="classSelector"></div>
+		          <div id="HlContentBox">
+		            <textarea></textarea>
+		            <div class="classHlSubmit"></div>
+		          </div>
+		        </form>
+		      </div>
+	    </div>
 
-    <div id="indivForm">
-      <center>
-        <p class="title">Dish it out.</p>
-      </center>
-
-      <form id="form-mail">
-        <center>
-          <p class="data">Student Name</p>
-          <input type="text" id="StudentName">
-          <p class="data data2">Subject</p>
-          <select id="subjectSelector">
-            <option value="English">English</option>
-            <option value="Maths">Maths</option>
-            <option value="Physics">Physics</option>
-            <option value="Economics">Economics</option>
-            <option value="Other">Other</option>
-          </select>
-          <p class="data">Whats the homework?</p>
-          <textarea id="hltext">put it here</textarea>
-          <div id="hlSubmit"></div>
-        </center>
-      </form>
-      </div>
-      <div class="classForm">
-        <form>
-          <div id="classSelector"></div>
-          <div id="HlContentBox">
-            <textarea></textarea>
-            <div class="classHlSubmit"></div>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div id="allClassesBox">
-      <div class="teacherNameWelcome">
-        <h1 class="tNWBox"></h1>
-      </div>
-      <div class="mainClassData">
-        <div class="Classes">
-          <div class="hasNoClass">
-            <button class="classMakeTrigger">It seems you have no classes. Set one up!</button>
-          </div>
-        </div>
-        <div class="Students"></div>
-      </div>
-      <div class="classSetup">
-          <input class="className" type="text" placeholder="Name your class, click me!"></input>
-          <div class="studentPicker"></div>
-          <button class="newClassSubmit">Create class!</button>
-      </div>
-    </div>
-
-
-</div> <!-- control panel -->
+	    <div id="allClassesBox">
+	      <div class="teacherNameWelcome">
+	        <h1 class="tNWBox"></h1>
+	      </div>
+	      <div class="mainClassData">
+	        <div class="Classes" id="classBox">
+	          <div class="hasNoClass">
+	            <button class="classMakeTrigger">It seems you have no classes. Set one up!</button>
+	          </div>
+	        </div>
+	        <div class="Students" id="classBox"></div>
+	      </div>
+	      <div class="classSetup">
+	          <input class="className" type="text" placeholder="Name your class, click me!"></input>
+	          <div class="studentPicker"></div>
+	          <button class="newClassSubmit">Create class!</button>
+	      </div>
+	    </div>
+	</div> <!-- control panel -->
 
 </div> <!-- end container -->
 
