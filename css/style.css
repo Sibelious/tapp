@@ -9,6 +9,15 @@ body {
 	background: url("../images/background.png");	
 	
 }
+#classPanel{
+	bottom: 0px;
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	background-color: rgba(30, 25, 25, 1);
+	z-index: 1;
+
+}
 .classSetup{
 	width: 100%;
 	height: 100%;
@@ -75,6 +84,7 @@ body {
 	height: 100%;
 	background-color: rgba(59, 52, 52, 0.58);
 	border: 1px solid black;
+	overflow: auto;
 
 }
 .Students{
@@ -101,7 +111,6 @@ body {
 	width: 100%;
 	right: 0px;
 	height: 20%;
-	border: 10px dashed black;
 
 }
 .hasNoClass{
@@ -175,11 +184,11 @@ button{
 	text-decoration:none;
 	text-align:center;
 
-}button:hover{
-	background-color:rgba(59, 52, 52, 0.58);
-}button:active {
-	position:relative;
-	top:1px;
+	}button:hover{
+		background-color:rgba(59, 52, 52, 0.58);
+	}button:active {
+		position:relative;
+		top:1px;
 
 }
 .container{
@@ -207,7 +216,6 @@ button{
 	top: 20px;
 	
 }
-
 .data{
 
 	width: 120px;
@@ -217,7 +225,6 @@ button{
 	top: 0px;
 
 }
-
 .data2{
 
 	width: 120px;
@@ -227,21 +234,20 @@ button{
 	top: -50px;
 
 }
-
 .menu h1{
 	color: white;
 	position: relative;
 	padding: 10px 10px 10px;
-}
 
+}
 .controlPanel{
 	width: 100%;
 	height: 338px;
 	right: 0px;
 	margin-left: auto;
 	margin-right: auto;
-}
 
+}
 .greenboard {
 
 	width: 600px;
@@ -260,6 +266,7 @@ button{
 	position: fixed;
 	background-repeat: repeat;
 	z-index: 1;
+
 }
 
 
