@@ -1,160 +1,259 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Databook</title>
-  <meta name="description" content="Databook Teacher">
-  <meta name="viewport" content="width=device-width">
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.16.min.js"></script>
-  <script type="text/javascript" src="js/custom.js"></script>
-  <script type="text/javascript" src="jquery-cookie-master/jquery.cookie.js"></script>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/fontface.css" />
-  <!-- viewports-->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <link rel="apple-touch-icon-precomposed" href="databook_teacher.png"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Login</title>
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
+	<link rel="stylesheet" href="assets/css/fonts/linecons/css/linecons.css">
+	<link rel="stylesheet" href="assets/css/fonts/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/xenon-core.css">
+	<link rel="stylesheet" href="assets/css/xenon-forms.css">
+	<link rel="stylesheet" href="assets/css/xenon-components.css">
+	<link rel="stylesheet" href="assets/css/xenon-skins.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.16.min.js"></script>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
 </head>
+<body class="page-body login-page">
 
-<body>
+	
+	<div class="login-container">
+	
+		<div class="row">
+	
+			<div class="col-sm-6">
+	
+				<script type="text/javascript">
+					jQuery(document).ready(function($)
+					{
+						// Reveal Login form
+						setTimeout(function(){ $(".fade-in-effect").addClass('in'); }, 1);
+	
+	
+						// Validation and Ajax action
+						$("form#login").validate({
+							rules: {
+								username: {
+									required: true
+								},
+	
+								passwd: {
+									required: true
+								}
+							},
+	
+							messages: {
+								username: {
+									required: 'Please enter your username.'
+								},
+	
+								passwd: {
+									required: 'Please enter your password.'
+								}
+							},
+	
+							// Form Processing via AJAX
+							submitHandler: function(form)
+							{
+								show_loading_bar(70); // Fill progress bar to 70% (just a given value)
+	
+								var opts = {
+									"closeButton": true,
+									"debug": false,
+									"positionClass": "toast-top-full-width",
+									"onclick": null,
+									"showDuration": "300",
+									"hideDuration": "1000",
+									"timeOut": "5000",
+									"extendedTimeOut": "1000",
+									"showEasing": "swing",
+									"hideEasing": "linear",
+									"showMethod": "fadeIn",
+									"hideMethod": "fadeOut"
+								};
+								
+								//Start up parse
+								Parse.initialize("gRgG6rXH59W6J19MrqWtiAWAdEGqjoZjEs0GsH6H", "viwxKM3bX10rDDpGpdc3U0kDCr9eJm4WDhhrlPR3");
+								Parse.User.logIn($(form).find('#username').val(),$(form).find('#passwd').val(),{
+									success: function(user) {
+										//Authentication
+										var Auth = Parse.Object.extend("User");
+										var query = new Parse.Query(Auth);
+										query.equalTo("username", $(form).find('#username').val());
+										query.find({
+											success: function(results){
+												for (var i=0; i < results.length; i++){
+													var object = results[i];
+													var auth = object.get('isUsrTeacher');
+													if(auth){
+														show_loading_bar({
+											delay: .5,
+											pct: 100,
+											finish: function(){
+													window.location.href = 'dashboard-1.html';
+															}
+										});
+													}
+													else{
+														toastr.error("You have entered wrong password, please try again. User and password is <strong>demo/demo</strong> :)", "Invalid Login!", opts);
+													$(form).find('#passwd').select();
+													}
+												}
+											},
+											error: function(error){
+												alert("Error: " + error.code + " " + error.message);
+											}
+										});
 
-<center>
-	<div id="logo"></div>
-</center>
+									},
+									error: function(user, error){
+										alert("Error: " + error.code + " " + error.message);
+									}
+								});
 
-
-<div class="container"><!-- the container -->
-
-    <div class="greenboard"> <!-- green board -->
-
-        <div class="boardform">
-        
-          <center>
-          <p class="title">Login</p>
-          </center>
-
-            <form id="form-mail">
-            <center>
-              <p class="data">Username</p>
-              <input type="text" id="username" />
-              <p class="data data2">Password</p>
-              <input type="password" id="password" />
-              <div class="submit"></div>
-            </center>            
-            </form>
-        
-        </div>
-	</div> <!-- end greenboard -->
-
-	<div class="controlPanel"><!-- the control panel-->
-
-	    <div class="UserSignUpForm">
-
-	      <center>
-	      <p class="title">Input the new username and password</p>
-	      </center>
-
-	      <form id="form-mail">
-	                  
-	          <p class="data">Username</p>
-	          <center>
-	          <input type="text" id="Username" />
-	          </center>
-	          <p class="data data2">Password</p>
-	          <center>
-	          <input type="password" id="Password" />
-	          </center>
-	          <div id="UserSignInSubmit"></div>
-	        
-	      </form>
+								// $.ajax({
+								// 	url: "data/login-check.php",
+								// 	method: 'POST',
+								// 	dataType: 'json',
+								// 	data: {
+								// 		do_login: true,
+								// 		username: $(form).find('#username').val(),
+								// 		passwd: $(form).find('#passwd').val(),
+								// 	},
+								// 	success: function(resp)
+								// 	{
+								// 		show_loading_bar({
+								// 			delay: .5,
+								// 			pct: 100,
+								// 			finish: function(){
+	
+								// 				// Redirect after successful login page (when progress bar reaches 100%)
+								// 				if(resp.accessGranted)
+								// 				{
+								// 																	window.location.href = 'dashboard-1.html';
+								// 																}
+								// 															else
+								// 				{
+								// 					toastr.error("You have entered wrong password, please try again. User and password is <strong>demo/demo</strong> :)", "Invalid Login!", opts);
+								// 					$(form).find('#passwd').select();
+								// 				}
+								// 														}
+								// 		});
+	
+								// 										}
+								// });
+	
+							}
+						});
+	
+						// Set Form focus
+						$("form#login .form-group:has(.form-control):first .form-control").focus();
+					});
+				</script>
+	
+				<!-- Errors container -->
+				<div class="errors-container">
+	
+					
+				</div>
+	
+				<!-- Add class "fade-in-effect" for login form effect -->
+				<form method="post" role="form" id="login" class="login-form fade-in-effect">
+	
+					<div class="login-header">
+						<a href="dashboard-1.html" class="logo">
+							<img src="assets/images/logo@2x.png" alt="" width="251" />
+						</a>
+	
+						<p>Login!</p>
+					</div>
+	
+	
+					<div class="form-group">
+						<label class="control-label" for="username">Username</label>
+						<input type="text" class="form-control input-dark" name="username" id="username" autocomplete="off" />
+					</div>
+	
+					<div class="form-group">
+						<label class="control-label" for="passwd">Password</label>
+						<input type="password" class="form-control input-dark" name="passwd" id="passwd" autocomplete="off" />
+					</div>
+	
+					<div class="form-group">
+						<button type="submit" class="btn btn-dark  btn-block text-left">
+							<i class="fa-lock"></i>
+							Log In
+						</button>
+					</div>
+	
+					<div class="login-footer">
+						<a href="#">Forgot your password?</a>
+	
+						<!-- <div class="info-links">
+							<a href="#">ToS</a> -
+							<a href="#">Privacy Policy</a>
+						</div> -->
+	
+					</div>
+	
+				</form>
+	
+				<!-- External login -->
+				<!-- <div class="external-login">
+					<a href="#" class="facebook">
+						<i class="fa-facebook"></i>
+						Facebook Login
+					</a>
+	
+					
+					<a href="<?php _hash(); ?>" class="twitter">
+						<i class="fa-twitter"></i>
+						Login with Twitter
+					</a>
+	
+					<a href="<?php _hash(); ?>" class="gplus">
+						<i class="fa-google-plus"></i>
+						Login with Google Plus
+					</a>
+					
+				</div> -->
+	
+			</div>
+	
 		</div>
-
-	    <div class="hlForm">
-		    <div id="GroupSelect">
-		      <h1>Who would you like to set homework to?</h1>
-		      <button id="classSelect">One of my classes</button>
-		      <button id="indivSelect">One particular student</button>
-		    </div>
-
-		    <div id="indivForm">
-		      <center>
-		        <p class="title">Dish it out.</p>
-		      </center>
-
-		      <form id="form-mail">
-		        <center>
-		          <p class="data">Student Name</p>
-		          <input type="text" id="StudentName">
-		          <p class="data data2">Subject</p>
-		          <select id="subjectSelector">
-		            <option value="English">English</option>
-		            <option value="Maths">Maths</option>
-		            <option value="Physics">Physics</option>
-		            <option value="Economics">Economics</option>
-		            <option value="Other">Other</option>
-		          </select>
-		          <p class="data">Whats the homework?</p>
-		          <textarea id="hltext">put it here</textarea>
-		          <div id="hlSubmit"></div>
-		        </center>
-		      </form>
-		      </div>
-		      <div class="classForm">
-		        <form>
-		          <div id="classSelector"></div>
-		          <div id="HlContentBox">
-		            <textarea></textarea>
-		            <div class="classHlSubmit"></div>
-		          </div>
-		        </form>
-		      </div>
-	    </div>
-
-	    <div id="allClassesBox">
-	      <div class="teacherNameWelcome">
-	        <h1 class="tNWBox"></h1>
-	      </div>
-	      <div class="mainClassData">
-	        <div class="Classes">
-	          <div class="hasNoClass">
-	            <button class="classMakeTrigger">It seems you have no classes. Set one up!</button>
-	          </div>
-	          <div id="classPanel">
-	          	<div id="addClass"></div>
-	          	<div id="editClass"></div>
-	          	<div id="deleteClass"></div>
-	          </div>
-	        </div>
-	        <div class="Students">
-	        	<div id="classPanel"></div>
-	        </div>
-	      </div>
-	      <div class="classSetup">
-	          <input class="className" type="text" placeholder="Name your class, click me!"></input>
-	          <div class="studentPicker"></div>
-	          <button class="newClassSubmit">Create class!</button>
-	      </div>
-	    </div>
-	</div> <!-- control panel -->
-
-</div> <!-- end container -->
+	
+	</div>
 
 
 
-<div class="menu"><!-- the menu panel-->
+	<!-- Bottom Scripts -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/TweenMax.min.js"></script>
+	<script src="assets/js/resizeable.js"></script>
+	<script src="assets/js/joinable.js"></script>
+	<script src="assets/js/xenon-api.js"></script>
+	<script src="assets/js/xenon-toggles.js"></script>
+	<script src="assets/js/jquery-validate/jquery.validate.min.js"></script>
+	<script src="assets/js/toastr/toastr.min.js"></script>
 
-<h1 class="userType"></h1>
 
-  
-    <p><button id="newUser">New User</button></p>
-    <p><button id="logOut">Log Out</button></p>
-    <p><button id="classChecker">My Classes</button></p>
-    <p><button id="hltrigger">Set Home Learning</button></p>
-  
-
-</div><!-- menu panel-->
+	<!-- JavaScripts initializations and stuff -->
+	<script src="assets/js/xenon-custom.js"></script>
 
 </body>
-
 </html>
