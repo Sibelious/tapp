@@ -1243,7 +1243,7 @@
 												}
 											},
 											customize: function(arg) {
-												var country = countries[arg.attributes.name];
+												var country = countries[arg.attribute("name")];
 												if(country) {
 													return {
 														color: country.color,
