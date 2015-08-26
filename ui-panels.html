@@ -8,7 +8,7 @@
 	<meta name="description" content="Xenon Boostrap Admin Panel" />
 	<meta name="author" content="" />
 
-	<title>Xenon - UI Elements</title>
+	<title>Home</title>
 
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
 	<link rel="stylesheet" href="assets/css/fonts/linecons/css/linecons.css">
@@ -19,8 +19,10 @@
 	<link rel="stylesheet" href="assets/css/xenon-components.css">
 	<link rel="stylesheet" href="assets/css/xenon-skins.css">
 	<link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
 
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -55,13 +57,13 @@
 						<div class="user-details">
 							
 							<h3>
-								<a href="extra-profile.html">John Smith</a>
+								<a href="extra-profile.html">Admin</a>
 								
 								<!-- Available statuses: is-online, is-idle, is-busy and is-offline -->
 								<span class="user-status is-online"></span>
 							</h3>
 							
-							<p class="user-title">Web Developer</p>
+							<p class="user-title">Teacher</p>
 							
 							<div class="user-links">
 								<a href="extra-profile.html" class="btn btn-primary">Edit Profile</a>
@@ -195,16 +197,16 @@
 					<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
 					<li>
 						<a href="dashboard-1.html">
-							<i class="linecons-cog"></i>
+							<i class="fa-bar-chart"></i>
 							<span class="title">Dashboard</span>
 						</a>
 						<ul>
 							<li>
 								<a href="dashboard-1.html">
-									<span class="title">Dashboard 1</span>
+									<span class="title">Data Overview</span>
 								</a>
 							</li>
-							<li>
+							<!-- <li>
 								<a href="dashboard-2.html">
 									<span class="title">Dashboard 2</span>
 								</a>
@@ -223,7 +225,7 @@
 								<a href="skin-generator.html">
 									<span class="title">Skin Generator</span>
 								</a>
-							</li>
+							</li> -->
 							<li>
 								<a href="update-highlights.html">
 									<span class="title">Update Highlights</span>
@@ -232,7 +234,7 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="layout-variants.html">
 							<i class="linecons-desktop"></i>
 							<span class="title">Layouts</span>
@@ -299,24 +301,24 @@
 								</a>
 							</li>
 						</ul>
-					</li>
+					</li> -->
 					<li class="active opened active">
 						<a href="ui-panels.html">
 							<i class="linecons-note"></i>
-							<span class="title">UI Elements</span>
+							<span class="title">Manage Classes</span>
 						</a>
 						<ul>
 							<li class="active">
 								<a href="ui-panels.html">
-									<span class="title">Panels</span>
+									<span class="title">Lesson Plans</span>
 								</a>
 							</li>
 							<li>
-								<a href="ui-buttons.html">
-									<span class="title">Buttons</span>
+								<a href="extra-members-list.html">
+									<span class="title">Attendance/Registration</span>
 								</a>
 							</li>
-							<li>
+							<!-- <li>
 								<a href="ui-tabs-accordions.html">
 									<span class="title">Tabs &amp; Accordions</span>
 								</a>
@@ -365,19 +367,13 @@
 								<a href="ui-other-elements.html">
 									<span class="title">Other Elements</span>
 								</a>
-							</li>
+							</li> -->
 						</ul>
 					</li>
 					<li>
-						<a href="ui-widgets.html">
-							<i class="linecons-star"></i>
-							<span class="title">Widgets</span>
-						</a>
-					</li>
-					<li>
 						<a href="mailbox-main.html">
-							<i class="linecons-mail"></i>
-							<span class="title">Mailbox</span>
+							<i class="linecons-pencil"></i>
+							<span class="title">Homework</span>
 							<span class="label label-success pull-right">5</span>
 						</a>
 						<ul>
@@ -400,361 +396,44 @@
 					</li>
 					<li>
 						<a href="tables-basic.html">
-							<i class="linecons-database"></i>
-							<span class="title">Tables</span>
+							<i class="linecons-graduation-cap"></i>
+							<span class="title">Tutor</span>
 						</a>
 						<ul>
 							<li>
 								<a href="tables-basic.html">
-									<span class="title">Basic Tables</span>
+									<span class="title">Attendance</span>
 								</a>
 							</li>
 							<li>
 								<a href="tables-responsive.html">
-									<span class="title">Responsive Table</span>
+									<span class="title">Announcements</span>
 								</a>
 							</li>
-							<li>
+							<!-- <li>
 								<a href="tables-datatables.html">
 									<span class="title">Data Tables</span>
 								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="forms-native.html">
-							<i class="linecons-params"></i>
-							<span class="title">Forms</span>
-						</a>
-						<ul>
-							<li>
-								<a href="forms-native.html">
-									<span class="title">Native Elements</span>
-								</a>
-							</li>
-							<li>
-								<a href="forms-advanced.html">
-									<span class="title">Advanced Plugins</span>
-								</a>
-							</li>
-							<li>
-								<a href="forms-wizard.html">
-									<span class="title">Form Wizard</span>
-								</a>
-							</li>
-							<li>
-								<a href="forms-validation.html">
-									<span class="title">Form Validation</span>
-								</a>
-							</li>
-							<li>
-								<a href="forms-input-masks.html">
-									<span class="title">Input Masks</span>
-								</a>
-							</li>
-							<li>
-								<a href="forms-file-upload.html">
-									<span class="title">File Upload</span>
-								</a>
-							</li>
-							<li>
-								<a href="forms-editors.html">
-									<span class="title">Editors</span>
-								</a>
-							</li>
-							<li>
-								<a href="forms-sliders.html">
-									<span class="title">Sliders</span>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="extra-gallery.html">
-							<i class="linecons-beaker"></i>
-							<span class="title">Extra</span>
-							<span class="label label-purple pull-right hidden-collapsed">New Items</span>
-						</a>
-						<ul>
-							<li>
-								<a href="extra-icons-fontawesome.html">
-									<span class="title">Icons</span>
-								</a>
-								<ul>
-									<li>
-										<a href="extra-icons-fontawesome.html">
-											<span class="title">Font Awesome</span>
-										</a>
-									</li>
-									<li>
-										<a href="extra-icons-linecons.html">
-											<span class="title">Linecons</span>
-										</a>
-									</li>
-									<li>
-										<a href="extra-icons-elusive.html">
-											<span class="title">Elusive</span>
-										</a>
-									</li>
-									<li>
-										<a href="extra-icons-meteocons.html">
-											<span class="title">Meteocons</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="extra-maps-google.html">
-									<span class="title">Maps</span>
-								</a>
-								<ul>
-									<li>
-										<a href="extra-maps-google.html">
-											<span class="title">Google Maps</span>
-										</a>
-									</li>
-									<li>
-										<a href="extra-maps-advanced.html">
-											<span class="title">Advanced Map</span>
-										</a>
-									</li>
-									<li>
-										<a href="extra-maps-vector.html">
-											<span class="title">Vector Map</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="extra-members-list.html">
-									<span class="title">Members</span>
-									<span class="label label-warning pull-right">New</span>
-								</a>
-								<ul>
-									<li>
-										<a href="extra-members-list.html">
-											<span class="title">Members List</span>
-										</a>
-									</li>
-									<li>
-										<a href="extra-members-add.html">
-											<span class="title">Add Member</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="extra-gallery.html">
-									<span class="title">Gallery</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-calendar.html">
-									<span class="title">Calendar</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-profile.html">
-									<span class="title">Profile</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-login.html">
-									<span class="title">Login</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-lockscreen.html">
-									<span class="title">Lockscreen</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-login-light.html">
-									<span class="title">Login Light</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-timeline.html">
-									<span class="title">Timeline</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-timeline-center.html">
-									<span class="title">Timeline Centerd</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-notes.html">
-									<span class="title">Notes</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-image-crop.html">
-									<span class="title">Image Crop</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-portlets.html">
-									<span class="title">Portlets</span>
-								</a>
-							</li>
-							<li>
-								<a href="blank-sidebar.html">
-									<span class="title">Blank Page</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-search.html">
-									<span class="title">Search</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-invoice.html">
-									<span class="title">Invoice</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-not-found.html">
-									<span class="title">404 Page</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-tocify.html">
-									<span class="title">Tocify</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-loader.html">
-									<span class="title">Loading Progress</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-page-loading-ol.html">
-									<span class="title">Page Loading Overlay</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-notifications.html">
-									<span class="title">Notifications</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-nestable-lists.html">
-									<span class="title">Nestable Lists</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-scrollable.html">
-									<span class="title">Scrollable</span>
-								</a>
-							</li>
+							</li> -->
 						</ul>
 					</li>
 					<li>
 						<a href="charts-main.html">
-							<i class="linecons-globe"></i>
-							<span class="title">Charts</span>
+							<i class="linecons-clock"></i>
+							<span class="title">Extra Curricular Activities</span>
 						</a>
-						<ul>
-							<li>
-								<a href="charts-main.html">
-									<span class="title">Chart Variants</span>
-								</a>
-							</li>
-							<li>
-								<a href="charts-range.html">
-									<span class="title">Range Selector</span>
-								</a>
-							</li>
-							<li>
-								<a href="charts-sparklines.html">
-									<span class="title">Sparklines</span>
-								</a>
-							</li>
-							<li>
-								<a href="charts-map.html">
-									<span class="title">Map Charts</span>
-								</a>
-							</li>
-							<li>
-								<a href="charts-gauges.html">
-									<span class="title">Circular Gauges</span>
-								</a>
-							</li>
-							<li>
-								<a href="charts-bar-gauges.html">
-									<span class="title">Bar Gauges</span>
-								</a>
-							</li>
-						</ul>
 					</li>
 					<li>
 						<a href="#">
 							<i class="linecons-cloud"></i>
-							<span class="title">Menu Levels</span>
+							<span class="title">Uploads</span>
 						</a>
-						<ul>
-							<li>
-								<a href="#">
-									<i class="entypo-flow-line"></i>
-									<span class="title">Menu Level 1.1</span>
-								</a>
-								<ul>
-									<li>
-										<a href="#">
-											<i class="entypo-flow-parallel"></i>
-											<span class="title">Menu Level 2.1</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<i class="entypo-flow-parallel"></i>
-											<span class="title">Menu Level 2.2</span>
-										</a>
-										<ul>
-											<li>
-												<a href="#">
-													<i class="entypo-flow-cascade"></i>
-													<span class="title">Menu Level 3.1</span>
-												</a>
-											</li>
-											<li>
-												<a href="#">
-													<i class="entypo-flow-cascade"></i>
-													<span class="title">Menu Level 3.2</span>
-												</a>
-												<ul>
-													<li>
-														<a href="#">
-															<i class="entypo-flow-branch"></i>
-															<span class="title">Menu Level 4.1</span>
-														</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">
-											<i class="entypo-flow-parallel"></i>
-											<span class="title">Menu Level 2.3</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">
-									<i class="entypo-flow-line"></i>
-									<span class="title">Menu Level 1.2</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="entypo-flow-line"></i>
-									<span class="title">Menu Level 1.3</span>
-								</a>
-							</li>
-						</ul>
+					</li>
+					<li>
+						<a href="#">
+							<i class="linecons-star"></i>
+							<span class="title">Feedback</span>
+						</a>
 					</li>
 				</ul>
 				
@@ -1091,31 +770,31 @@
 			
 						<ul class="dropdown-menu user-profile-menu list-unstyled">
 							<li>
-								<a href="#edit-profile">
+								<a href="#">
 									<i class="fa-edit"></i>
 									New Post
 								</a>
 							</li>
 							<li>
-								<a href="#settings">
+								<a href="#">
 									<i class="fa-wrench"></i>
 									Settings
 								</a>
 							</li>
 							<li>
-								<a href="#profile">
+								<a href="#">
 									<i class="fa-user"></i>
 									Profile
 								</a>
 							</li>
 							<li>
-								<a href="#help">
+								<a href="#">
 									<i class="fa-info"></i>
 									Help
 								</a>
 							</li>
 							<li class="last">
-								<a href="extra-lockscreen.html">
+								<a href="">
 									<i class="fa-lock"></i>
 									Logout
 								</a>
@@ -1136,8 +815,8 @@
 			<div class="page-title">
 			
 				<div class="title-env">
-					<h1 class="title">Panels</h1>
-					<p class="description">Panels and their variants</p>
+					<h1 class="title">Your Lesson Plans</h1>
+					<p class="description">All your class lesson plans are here</p>
 				</div>
 			
 					<div class="breadcrumb-env">
@@ -1148,31 +827,82 @@
 						</li>
 								<li>
 			
-										<a href="ui-panels.html">UI Elements</a>
+										<a href="">Manage Classes</a>
 								</li>
 							<li class="active">
 			
-										<strong>Panels</strong>
+										<strong>Lesson Plans</strong>
 								</li>
 								</ol>
 						
 				</div>
 				
 			</div>
-			
-			<div class="row">
+			<div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="row">
 				<div class="col-md-6">
 					
 					<!-- Default panel -->
-					<div class="panel panel-default">
+					<div class="panel panel-default panel-border">
 						<div class="panel-heading">
-							Default panel title
+							Biology 1
 						</div>
 						
 						<div class="panel-body">
 							
-							<p>Folly words widow one downs few age every seven. If miss part by fact he park just shew. Discovered had get considered projection who favourable. Necessary up knowledge it tolerably.</p>
-							<p>Unwilling departure education is be dashwoods or an. Use off agreeable law unwilling sir deficient curiosity instantly. Easy mind life fact with see has bore ten. Parish any chatty can elinor direct for former. Up as meant widow equal an share least.</p>
+							<p>The diffrence between mitosis and meiosis</p>
+							<p>go through chapters 8 - 10 on mitosis and meiosis</p>
+							
+						</div>
+                        <footer class="main-footer">
+                            First floor - Room 107 
+                        </footer>
+					</div>
+					
+				</div>
+				
+				<div class="col-md-6">
+					
+					<!-- Bordered panel -->
+					<div class="panel panel-default panel-border">
+						<div class="panel-heading">
+							Physics 3
+						</div>
+						
+						<div class="panel-body">
+							
+							<p>Revise the Young modulus</p>
+							<p>Go through the young modulus on chapter 12 in the textbook, complete excersizes and go through the linked powerpoint.</p>
+                            <p><button class="btn btn-primary btn-icon btn-icon-standalone">
+									<i class="fa-download"></i>
+									<span>Download File</span>
+								</button></p>
+							
+						</div>
+                        <footer class="main-footer">
+                            Third floor - Room 243 
+                        </footer>
+					</div>
+					
+				</div>
+			</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+				<div class="col-md-6">
+					
+					<!-- Default panel -->
+					<div class="panel panel-default panel-border">
+						<div class="panel-heading">
+							Biology 1
+						</div>
+						
+						<div class="panel-body">
+							
+							<p>The diffrence between mitosis and meiosis</p>
+							<p>go through chapters 8 - 10 on mitosis and meiosis</p>
 							
 						</div>
 					</div>
@@ -1184,53 +914,35 @@
 					<!-- Bordered panel -->
 					<div class="panel panel-default panel-border">
 						<div class="panel-heading">
-							Border panel title
+							Physics 3
 						</div>
 						
 						<div class="panel-body">
 							
-							<p>Unwilling departure education is be dashwoods or an. Use off agreeable law unwilling sir deficient curiosity instantly. Easy mind life fact with see has bore ten. Parish any chatty can elinor direct for former. Up as meant widow equal an share least.</p>
-							<p>Folly words widow one downs few age every seven. If miss part by fact he park just shew. Discovered had get considered projection who favourable. Necessary up knowledge it tolerably.</p>
+							<p>Revise the Young modulus</p>
+							<p>Go through the young modulus on chapter 12 in the textbook, complete excersizes and go through the linked powerpoint.</p>
 							
 						</div>
 					</div>
 					
 				</div>
 			</div>
-			
-			<div class="row">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row">
 				<div class="col-md-6">
 					
 					<!-- Default panel -->
-					<div class="panel panel-default"><!-- Add class "collapsed" to minimize the panel -->
+					<div class="panel panel-default panel-border">
 						<div class="panel-heading">
-							<h3 class="panel-title">Normal panel with controls</h3>
-							
-							<div class="panel-options">
-								<a href="#">
-									<i class="linecons-cog"></i>
-								</a>
-								
-								<a href="#" data-toggle="panel">
-									<span class="collapse-icon">&ndash;</span>
-									<span class="expand-icon">+</span>
-								</a>
-								
-								<a href="#" data-toggle="reload">
-									<i class="fa-rotate-right"></i>
-								</a>
-								
-								<a href="#" data-toggle="remove">
-									&times;
-								</a>
-							</div>
+							Biology 1
 						</div>
 						
 						<div class="panel-body">
 							
-							<p>Now indulgence dissimilar for his thoroughly has terminated. Agreement offending commanded my an. Change wholly say why eldest period. Are projection put celebrated particular unreserved joy unsatiable its. In then dare good am rose bred or. On am in nearer square wanted. </p>
-							<p>She travelling acceptance men unpleasant her especially entreaties law. Law forth but end any arise chief arose. Old her say learn these large. Joy fond many ham high seen this. Few preferred continual sir led incommode neglected. Discovered too old insensible collecting unpleasant but invitation. </p>
-			
+							<p>The diffrence between mitosis and meiosis</p>
+							<p>go through chapters 8 - 10 on mitosis and meiosis</p>
+							
 						</div>
 					</div>
 					
@@ -1238,75 +950,38 @@
 				
 				<div class="col-md-6">
 					
-					<!-- Bordered + shadow panel -->
-					<div class="panel panel-default panel-border panel-shadow"><!-- Add class "collapsed" to minimize the panel -->
+					<!-- Bordered panel -->
+					<div class="panel panel-default panel-border">
 						<div class="panel-heading">
-							<h3 class="panel-title">Border with shadow panel</h3>
-							
-							<div class="panel-options">
-								<a href="#">
-									<i class="linecons-cog"></i>
-								</a>
-								
-								<a href="#" data-toggle="panel">
-									<span class="collapse-icon">&ndash;</span>
-									<span class="expand-icon">+</span>
-								</a>
-								
-								<a href="#" data-toggle="reload">
-									<i class="fa-rotate-right"></i>
-								</a>
-								
-								<a href="#" data-toggle="remove">
-									&times;
-								</a>
-							</div>
+							Physics 3
 						</div>
 						
 						<div class="panel-body">
 							
-							<p>She travelling acceptance men unpleasant her especially entreaties law. Law forth but end any arise chief arose. Old her say learn these large. Joy fond many ham high seen this. Few preferred continual sir led incommode neglected. Discovered too old insensible collecting unpleasant but invitation. </p>
-							<p>Now indulgence dissimilar for his thoroughly has terminated. Agreement offending commanded my an. Change wholly say why eldest period. Are projection put celebrated particular unreserved joy unsatiable its. In then dare good am rose bred or. On am in nearer square wanted. </p>
-			
+							<p>Revise the Young modulus</p>
+							<p>Go through the young modulus on chapter 12 in the textbook, complete excersizes and go through the linked powerpoint.</p>
+							
 						</div>
 					</div>
 					
 				</div>
 			</div>
-			
-			<div class="row">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row">
 				<div class="col-md-6">
 					
-					<!-- Flat panel -->
-					<div class="panel panel-flat"><!-- Add class "collapsed" to minimize the panel -->
+					<!-- Default panel -->
+					<div class="panel panel-default panel-border">
 						<div class="panel-heading">
-							<h3 class="panel-title">Flat panel without background</h3>
-							
-							<div class="panel-options">
-								<a href="#">
-									<i class="linecons-cog"></i>
-								</a>
-								
-								<a href="#" data-toggle="panel">
-									<span class="collapse-icon">&ndash;</span>
-									<span class="expand-icon">+</span>
-								</a>
-								
-								<a href="#" data-toggle="reload">
-									<i class="fa-rotate-right"></i>
-								</a>
-								
-								<a href="#" data-toggle="remove">
-									&times;
-								</a>
-							</div>
+							Biology 1
 						</div>
 						
 						<div class="panel-body">
 							
-							<p>In entirely be to at settling felicity. Fruit two match men you seven share. Needed as or is enough points. Miles at smart ﻿no marry whole linen mr. Income joy nor can wisdom summer. Extremely depending he gentleman improving intention rapturous as. </p>
-							<p>Picture removal detract earnest is by. Esteems met joy attempt way clothes yet demesne tedious. Replying an marianne do it an entrance advanced. Two dare say play when hold. Required bringing me material stanhill jointure is as he. Mutual indeed yet her living result matter him bed whence. </p>
-			
+							<p>The diffrence between mitosis and meiosis</p>
+							<p>go through chapters 8 - 10 on mitosis and meiosis</p>
+							
 						</div>
 					</div>
 					
@@ -1314,494 +989,89 @@
 				
 				<div class="col-md-6">
 					
-					<!-- Inverted colors panel -->
-					<div class="panel panel-inverted"><!-- Add class "collapsed" to minimize the panel -->
+					<!-- Bordered panel -->
+					<div class="panel panel-default panel-border">
 						<div class="panel-heading">
-							<h3 class="panel-title">Inverted panel</h3>
-							
-							<div class="panel-options">
-								<a href="#" data-toggle="panel">
-									<span class="collapse-icon">&ndash;</span>
-									<span class="expand-icon">+</span>
-								</a>
-								
-								<a href="#" data-toggle="remove">
-									&times;
-								</a>
-							</div>
+							Physics 3
 						</div>
 						
 						<div class="panel-body">
 							
-							<p>Picture removal detract earnest is by. Esteems met joy attempt way clothes yet demesne tedious. Replying an marianne do it an entrance advanced. Two dare say play when hold. Required bringing me material stanhill jointure is as he. Mutual indeed yet her living result matter him bed whence. </p>
-							<p>In entirely be to at settling felicity. Fruit two match men you seven share. Needed as or is enough points. Miles at smart ﻿no marry whole linen mr. Income joy nor can wisdom summer. Extremely depending he gentleman improving intention rapturous as. </p>
-			
-						</div>
-					</div>
-					
-				</div>
-				
-				<div class="col-md-12">
-					
-					<!-- Collapsed panel -->
-					<div class="panel panel-default collapsed"><!-- Add class "collapsed" to minimize the panel -->
-						<div class="panel-heading">
-							<h3 class="panel-title">This panel is collapsed by default</h3>
+							<p>Revise the Young modulus</p>
+							<p>Go through the young modulus on chapter 12 in the textbook, complete excersizes and go through the linked powerpoint.</p>
 							
-							<div class="panel-options">
-								
-								<a href="#" data-toggle="panel">
-									<span class="collapse-icon">&ndash;</span>
-									<span class="expand-icon">+</span>
-								</a>
-								
-								<a href="#" data-toggle="remove">
-									&times;
-								</a>
-							</div>
-						</div>
-						
-						<div class="panel-body">
-							
-							<p>In entirely be to at settling felicity. Fruit two match men you seven share. Needed as or is enough points. Miles at smart ﻿no marry whole linen mr. Income joy nor can wisdom summer. Extremely depending he gentleman improving intention rapturous as. </p>
-							<p>Picture removal detract earnest is by. Esteems met joy attempt way clothes yet demesne tedious. Replying an marianne do it an entrance advanced. Two dare say play when hold. Required bringing me material stanhill jointure is as he. Mutual indeed yet her living result matter him bed whence. </p>
-			
 						</div>
 					</div>
 					
 				</div>
 			</div>
-			
-			<div class="row">
-				<div class="col-md-5">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+				<div class="col-md-6">
 					
-					<!-- Tabbed panel -->
-							<div class="panel panel-default"><!-- Add class "collapsed" to minimize the panel -->
+					<!-- Default panel -->
+					<div class="panel panel-default panel-border">
 						<div class="panel-heading">
-							<h3 class="panel-title">Tabbed panel</h3>
-							
-							<div class="panel-options">
-								
-								<ul class="nav nav-tabs">
-									<li class="active">
-										<a href="#tab-1" data-toggle="tab">Apples</a>
-									</li>
-									<li>
-										<a href="#tab-2" data-toggle="tab">Bananas</a>
-									</li>
-									<li>
-										<a href="#tab-3" data-toggle="tab">Pears</a>
-									</li>
-								</ul>
-								
-							</div>
+							Biology 1
 						</div>
 						
 						<div class="panel-body">
 							
-							<div class="tab-content">
-								
-								<div class="tab-pane active" id="tab-1">
-									<p>Breakfast agreeable incommode departure it an. By ignorant at on wondered relation. Enough at tastes really so cousin am of. Extensive therefore supported by extremity of contented. Is pursuit compact demesne invited elderly be. View him she roof tell her case has sigh. Moreover is possible he admitted sociable concerns. By in cold no less been sent hard hill. </p>
-									<p>He do subjects prepared bachelor juvenile ye oh. He feelings removing informed he as ignorant we prepared. Evening do forming observe spirits is in. Country hearted be of justice sending. On so they as with room cold ye. Be call four my went mean. Celebrated if remarkably especially an. Going eat set she books found met aware. </p>
-								</div>
-								
-								<div class="tab-pane" id="tab-2">
-									<p>Building mr concerns servants in he outlived am breeding. He so lain good miss when sell some at if. Told hand so an rich gave next. How doubt yet again see son smart. While mirth large of on front. Ye he greater related adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old. </p>
-									<p>Old there any widow law rooms. Agreed but expect repair she nay sir silent person. Direction can dependent one bed situation attempted. His she are man their spite avoid. Her pretended fulfilled extremely education yet. Satisfied did one admitting incommode tolerably how are. </p>
-									<p>Dispatched entreaties boisterous say why stimulated. Certain forbade picture now prevent carried she get see sitting. Up twenty limits as months. Inhabit so perhaps of in to certain. Sex excuse chatty was seemed warmth. Nay add far few immediate sweetness earnestly dejection. </p>
-								</div>
-								
-								<div class="tab-pane" id="tab-3">
-									<p>In to am attended desirous raptures declared diverted confined at. Collected instantly remaining up certainly to necessary as. Over walk dull into son boy door went new. At or happiness commanded daughters as. Is handsome an declared at received in extended vicinity subjects. Into miss on he over been late pain an. Only week bore boy what fat case left use. Match round scale now sex style far times. Your me past an much. </p>
-									<p>Far concluded not his something extremity. Want four we face an he gate. On he of played he ladies answer little though nature. Blessing oh do pleasure as so formerly. Took four spot soon led size you. Outlived it received he material. Him yourself joy moderate off repeated laughter outweigh screened. </p>
-									<p>Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring the why performed continual improving. Civil songs so large shade in cause. Lady an mr here must neat sold. Children greatest ye extended delicate of. No elderly passage earnest as in removed winding or. </p>
-								</div>
-								
-							</div>
-			
-						</div>
-					</div>
-							
-				</div>
-				<div class="col-md-7">
-					
-					<!-- Tabbed panel 2 -->
-							<div class="panel panel-default panel-tabs"><!-- Add class "collapsed" to minimize the panel -->
-						<div class="panel-heading">
-							<h3 class="panel-title">Tabbed panel</h3>
-							
-							<div class="panel-options">
-								
-								<ul class="nav nav-tabs">
-									<li>
-										<a href="#tab-4" data-toggle="tab">Biography</a>
-									</li>
-									<li class="active">
-										<a href="#tab-5" data-toggle="tab">Portfolio</a>
-									</li>
-									<li>
-										<a href="#tab-6" data-toggle="tab">Tweets</a>
-									</li>
-								</ul>
-								
-							</div>
-						</div>
-						
-						<div class="panel-body">
-							
-							<div class="tab-content">
-								
-								<div class="tab-pane" id="tab-4">
-									<p>Breakfast agreeable incommode departure it an. By ignorant at on wondered relation. Enough at tastes really so cousin am of. Extensive therefore supported by extremity of contented. Is pursuit compact demesne invited elderly be. View him she roof tell her case has sigh. Moreover is possible he admitted sociable concerns. By in cold no less been sent hard hill. </p>
-									<p>He do subjects prepared bachelor juvenile ye oh. He feelings removing informed he as ignorant we prepared. Evening do forming observe spirits is in. Country hearted be of justice sending. On so they as with room cold ye. Be call four my went mean. Celebrated if remarkably especially an. Going eat set she books found met aware. </p>
-								</div>
-								
-								<div class="tab-pane active" id="tab-5">
-									<p>Building mr concerns servants in he outlived am breeding. He so lain good miss when sell some at if. Told hand so an rich gave next. How doubt yet again see son smart. While mirth large of on front. Ye he greater related adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old. </p>
-									<p>Old there any widow law rooms. Agreed but expect repair she nay sir silent person. Direction can dependent one bed situation attempted. His she are man their spite avoid. Her pretended fulfilled extremely education yet. Satisfied did one admitting incommode tolerably how are. </p>
-									<p>Dispatched entreaties boisterous say why stimulated. Certain forbade picture now prevent carried she get see sitting. Up twenty limits as months. Inhabit so perhaps of in to certain. Sex excuse chatty was seemed warmth. Nay add far few immediate sweetness earnestly dejection. </p>
-								</div>
-								
-								<div class="tab-pane" id="tab-6">
-									<p>In to am attended desirous raptures declared diverted confined at. Collected instantly remaining up certainly to necessary as. Over walk dull into son boy door went new. At or happiness commanded daughters as. Is handsome an declared at received in extended vicinity subjects. Into miss on he over been late pain an. Only week bore boy what fat case left use. Match round scale now sex style far times. Your me past an much. </p>
-									<p>Far concluded not his something extremity. Want four we face an he gate. On he of played he ladies answer little though nature. Blessing oh do pleasure as so formerly. Took four spot soon led size you. Outlived it received he material. Him yourself joy moderate off repeated laughter outweigh screened. </p>
-									<p>Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring the why performed continual improving. Civil songs so large shade in cause. Lady an mr here must neat sold. Children greatest ye extended delicate of. No elderly passage earnest as in removed winding or. </p>
-								</div>
-								
-							</div>
-			
-						</div>
-					</div>
-						</div>
-			</div>
-			
-			
-			<div class="row">
-				<div class="col-md-8">
-					
-					<!-- Colored panel, remember to add "panel-color" before applying the color -->
-					<div class="panel panel-color panel-success"><!-- Add class "collapsed" to minimize the panel -->
-						<div class="panel-heading">
-							<h3 class="panel-title">Green colored panel</h3>
-							
-							<div class="panel-options">
-								<a href="#">
-									<i class="linecons-cog"></i>
-								</a>
-								
-								<a href="#" data-toggle="panel">
-									<span class="collapse-icon">&ndash;</span>
-									<span class="expand-icon">+</span>
-								</a>
-								
-								<a href="#" data-toggle="reload">
-									<i class="fa-rotate-right"></i>
-								</a>
-								
-								<a href="#" data-toggle="remove">
-									&times;
-								</a>
-							</div>
-						</div>
-						
-						<div class="panel-body">
-							
-							<p>Fat new smallness few supposing suspicion two. Course sir people worthy horses add entire suffer. How one dull get busy dare far. At principle perfectly by sweetness do. As mr started arrival subject by believe. Strictly numerous outlived kindness whatever on we no on addition. Fat new smallness few supposing suspicion two. Course sir people worthy horses add entire suffer. How one dull get busy dare far. At principle perfectly by sweetness do. As mr started arrival subject by believe. Strictly numerous outlived kindness whatever on we no on addition. Course sir people worthy horses add entire suffer. How one dull get busy dare far.</p>
-			
-						</div>
-					</div>
-					
-				</div>
-				
-				<div class="col-md-4">
-					
-					<!-- Colored panel, remember to add "panel-color" before applying the color -->
-					<div class="panel panel-color panel-warning"><!-- Add class "collapsed" to minimize the panel -->
-						<div class="panel-heading">
-							<h3 class="panel-title">Yellow colored panel</h3>
-							
-							<div class="panel-options">
-								<a href="#">
-									<i class="linecons-cog"></i>
-								</a>
-								
-								<a href="#" data-toggle="panel">
-									<span class="collapse-icon">&ndash;</span>
-									<span class="expand-icon">+</span>
-								</a>
-								
-								<a href="#" data-toggle="reload">
-									<i class="fa-rotate-right"></i>
-								</a>
-								
-								<a href="#" data-toggle="remove">
-									&times;
-								</a>
-							</div>
-						</div>
-						
-						<div class="panel-body">
-							
-							<p>Fat new smallness few supposing suspicion two. Course sir people worthy horses add entire suffer. How one dull get busy dare far. At principle perfectly by sweetness do. As mr started arrival subject by believe. Strictly numerous outlived kindness whatever on we no on addition. </p>
-			
-						</div>
-					</div>
-					
-				</div>
-				
-				<div class="col-md-4">
-					
-					<!-- Colored panel, remember to add "panel-color" before applying the color -->
-					<div class="panel panel-color panel-info"><!-- Add class "collapsed" to minimize the panel -->
-						<div class="panel-heading">
-							<h3 class="panel-title">Light blue panel</h3>
-							
-							<div class="panel-options">
-								<a href="#">
-									<i class="linecons-cog"></i>
-								</a>
-								
-								<a href="#" data-toggle="panel">
-									<span class="collapse-icon">&ndash;</span>
-									<span class="expand-icon">+</span>
-								</a>
-								
-								<a href="#" data-toggle="reload">
-									<i class="fa-rotate-right"></i>
-								</a>
-								
-								<a href="#" data-toggle="remove">
-									&times;
-								</a>
-							</div>
-						</div>
-						
-						<div class="panel-body">
-							
-							<p>Fat new smallness few supposing suspicion two. Course sir people worthy horses add entire suffer. How one dull get busy dare far. At principle perfectly by sweetness do. As mr started arrival subject by believe. Strictly numerous outlived kindness whatever on we no on addition. </p>
-			
-						</div>
-					</div>
-					
-				</div>
-				
-				<div class="col-md-8">
-					
-					<!-- Colored panel, remember to add "panel-color" before applying the color -->
-					<div class="panel panel-color panel-red"><!-- Add class "collapsed" to minimize the panel -->
-						<div class="panel-heading">
-							<h3 class="panel-title">Red colored panel</h3>
-							
-							<div class="panel-options">
-								<a href="#">
-									<i class="linecons-cog"></i>
-								</a>
-								
-								<a href="#" data-toggle="panel">
-									<span class="collapse-icon">&ndash;</span>
-									<span class="expand-icon">+</span>
-								</a>
-								
-								<a href="#" data-toggle="reload">
-									<i class="fa-rotate-right"></i>
-								</a>
-								
-								<a href="#" data-toggle="remove">
-									&times;
-								</a>
-							</div>
-						</div>
-						
-						<div class="panel-body">
-							
-							<p>Fat new smallness few supposing suspicion two. Course sir people worthy horses add entire suffer. How one dull get busy dare far. At principle perfectly by sweetness do. As mr started arrival subject by believe. Strictly numerous outlived kindness whatever on we no on addition. Fat new smallness few supposing suspicion two. Course sir people worthy horses add entire suffer. How one dull get busy dare far. At principle perfectly by sweetness do. As mr started arrival subject by believe. Strictly numerous outlived kindness whatever on we no on addition. Course sir people worthy horses add entire suffer. How one dull get busy dare far.</p>
+							<p>The diffrence between mitosis and meiosis</p>
+							<p>go through chapters 8 - 10 on mitosis and meiosis</p>
 							
 						</div>
 					</div>
 					
 				</div>
 				
-				<div class="col-md-8">
+				<div class="col-md-6">
 					
-					<!-- Colored panel, remember to add "panel-color" before applying the color -->
-					<div class="panel panel-color panel-purple"><!-- Add class "collapsed" to minimize the panel -->
+					<!-- Bordered panel -->
+					<div class="panel panel-default panel-border">
 						<div class="panel-heading">
-							<h3 class="panel-title">Purple colored panel</h3>
-							
-							<div class="panel-options">
-								<a href="#">
-									<i class="linecons-cog"></i>
-								</a>
-								
-								<a href="#" data-toggle="panel">
-									<span class="collapse-icon">&ndash;</span>
-									<span class="expand-icon">+</span>
-								</a>
-								
-								<a href="#" data-toggle="reload">
-									<i class="fa-rotate-right"></i>
-								</a>
-								
-								<a href="#" data-toggle="remove">
-									&times;
-								</a>
-							</div>
+							Physics 3
 						</div>
 						
 						<div class="panel-body">
 							
-							<p>Fat new smallness few supposing suspicion two. Course sir people worthy horses add entire suffer. How one dull get busy dare far. At principle perfectly by sweetness do. As mr started arrival subject by believe. Strictly numerous outlived kindness whatever on we no on addition. Fat new smallness few supposing suspicion two. Course sir people worthy horses add entire suffer. How one dull get busy dare far. At principle perfectly by sweetness do. As mr started arrival subject by believe. Strictly numerous outlived kindness whatever on we no on addition. Course sir people worthy horses add entire suffer. How one dull get busy dare far.</p>
-			
-						</div>
-					</div>
-					
-				</div>
-				
-				<div class="col-md-4">
-					
-					<!-- Colored panel, remember to add "panel-color" before applying the color -->
-					<div class="panel panel-color panel-black"><!-- Add class "collapsed" to minimize the panel -->
-						<div class="panel-heading">
-							<h3 class="panel-title">Black colored panel</h3>
+							<p>Revise the Young modulus</p>
+							<p>Go through the young modulus on chapter 12 in the textbook, complete excersizes and go through the linked powerpoint.</p>
 							
-							<div class="panel-options">
-								<a href="#">
-									<i class="linecons-cog"></i>
-								</a>
-								
-								<a href="#" data-toggle="panel">
-									<span class="collapse-icon">&ndash;</span>
-									<span class="expand-icon">+</span>
-								</a>
-								
-								<a href="#" data-toggle="reload">
-									<i class="fa-rotate-right"></i>
-								</a>
-								
-								<a href="#" data-toggle="remove">
-									&times;
-								</a>
-							</div>
-						</div>
-						
-						<div class="panel-body">
-							
-							<p>Fat new smallness few supposing suspicion two. Course sir people worthy horses add entire suffer. How one dull get busy dare far. At principle perfectly by sweetness do. As mr started arrival subject by believe. Strictly numerous outlived kindness whatever on we no on addition. </p>
-			
-						</div>
-					</div>
-					
-				</div>
-				
-				<div class="col-md-4">
-					
-					<!-- Colored panel, remember to add "panel-color" before applying the color -->
-					<div class="panel panel-color panel-gray"><!-- Add class "collapsed" to minimize the panel -->
-						<div class="panel-heading">
-							<h3 class="panel-title">Gray colored panel</h3>
-							
-							<div class="panel-options">
-								<a href="#">
-									<i class="linecons-cog"></i>
-								</a>
-								
-								<a href="#" data-toggle="panel">
-									<span class="collapse-icon">&ndash;</span>
-									<span class="expand-icon">+</span>
-								</a>
-								
-								<a href="#" data-toggle="reload">
-									<i class="fa-rotate-right"></i>
-								</a>
-								
-								<a href="#" data-toggle="remove">
-									&times;
-								</a>
-							</div>
-						</div>
-						
-						<div class="panel-body">
-							
-							<p>Fat new smallness few supposing suspicion two. Course sir people worthy horses add entire suffer. How one dull get busy dare far. At principle perfectly by sweetness do. As mr started arrival subject by believe. Strictly numerous outlived kindness whatever on we no on addition. </p>
-			
-						</div>
-					</div>
-					
-				</div>
-				
-				<div class="col-md-4">
-					
-					<!-- Colored panel, remember to add "panel-color" before applying the color -->
-					<div class="panel panel-color panel-blue"><!-- Add class "collapsed" to minimize the panel -->
-						<div class="panel-heading">
-							<h3 class="panel-title">Blue colored panel</h3>
-							
-							<div class="panel-options">
-								<a href="#">
-									<i class="linecons-cog"></i>
-								</a>
-								
-								<a href="#" data-toggle="panel">
-									<span class="collapse-icon">&ndash;</span>
-									<span class="expand-icon">+</span>
-								</a>
-								
-								<a href="#" data-toggle="reload">
-									<i class="fa-rotate-right"></i>
-								</a>
-								
-								<a href="#" data-toggle="remove">
-									&times;
-								</a>
-							</div>
-						</div>
-						
-						<div class="panel-body">
-							
-							<p>Fat new smallness few supposing suspicion two. Course sir people worthy horses add entire suffer. How one dull get busy dare far. At principle perfectly by sweetness do. As mr started arrival subject by believe. Strictly numerous outlived kindness whatever on we no on addition. </p>
-			
-						</div>
-					</div>
-					
-				</div>
-				
-				<div class="col-md-4">
-					
-					<!-- Colored panel, remember to add "panel-color" before applying the color -->
-					<div class="panel panel-color panel-danger"><!-- Add class "collapsed" to minimize the panel -->
-						<div class="panel-heading">
-							<h3 class="panel-title">Danger warning here</h3>
-							
-							<div class="panel-options">
-								<a href="#">
-									<i class="linecons-cog"></i>
-								</a>
-								
-								<a href="#" data-toggle="panel">
-									<span class="collapse-icon">&ndash;</span>
-									<span class="expand-icon">+</span>
-								</a>
-								
-								<a href="#" data-toggle="reload">
-									<i class="fa-rotate-right"></i>
-								</a>
-								
-								<a href="#" data-toggle="remove">
-									&times;
-								</a>
-							</div>
-						</div>
-						
-						<div class="panel-body">
-							
-							<p>Fat new smallness few supposing suspicion two. Course sir people worthy horses add entire suffer. How one dull get busy dare far. At principle perfectly by sweetness do. As mr started arrival subject by believe. Strictly numerous outlived kindness whatever on we no on addition. </p>
-			
 						</div>
 					</div>
 					
 				</div>
 			</div>
+                    </div>
+                    
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true
+    });
+    </script>
+			
+						
+			
+			
+			
+			
+			
+			
 			<!-- Main Footer -->
 			<!-- Choose between footer styles: "footer-type-1" or "footer-type-2" -->
 			<!-- Add class "sticky" to  always stick the footer to the end of page (if page contents is small) -->
@@ -1812,9 +1082,7 @@
 				
 					<!-- Add your copyright text here -->
 					<div class="footer-text">
-						&copy; 2014 
-						<strong>Xenon</strong> 
-						theme by <a href="http://laborator.co" target="_blank">Laborator</a> - <a href="http://themeforest.net/item/xenon-bootstrap-admin-theme/9059661?ref=Laborator" target="_blank">Purchase for only <strong>23$</strong></a>
+						
 					</div>
 					
 					
